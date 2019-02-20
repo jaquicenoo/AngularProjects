@@ -26,4 +26,13 @@
   margin-left: 0;
 }
 
+.bg-data-container .scse-form-group .animated-label {
+  top: 10px;
+}
+.bg-data-container .scse-form-group .scse-form-control.active ~ .animated-label,
+.bg-data-container .scse-form-group .scse-form-control:focus:not(.select) ~ .animated-label,
+.bg-data-container .scse-form-group .scse-form-control:valid:not(.select) ~ .animated-label {
+  top: -4px;
+}
+
 /*# sourceMappingURL=hospitalarios.css.map */

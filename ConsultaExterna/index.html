@@ -136,8 +136,12 @@
                     </div>
                 </div>
                 <!--fin hospitalarios  -->
-                <div id="bgsurgical" data-background="" class="bg-data-container">
-                    <label class="bg-title">Quirurgicos</label>
+                <!-- patologicos  -->
+                <div id="bgpathological" data-background="" class="bg-data-container">
+                    <label class="bg-title">Patologicos</label>
+                    <button class="plus-bottom float-right m-2" type="button">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
                     <div class="row m-1">
                         <div class="col-md-5">
                             <div id="su_back" data-code="bagcground" data-control="" data-type="CG" class="d-flex">
@@ -156,18 +160,52 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <div class="row m-1">
-                                <div class="col-md-6 p-0">
-                                    <div id="su_tagify" data-control="" data-code="" data-type="TF">
-                                        <input class="bg-tagify" type="text" name="tagify" value="" />
+                        <div class="row m-1 hidden animated fadeIn fast" data-expand="">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-8 pl-4">
+                                        <div id="su_tagify" data-control="" data-code="" data-type="TF">
+                                            <input class="bg-tagify" type="text" name="tagify" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_code" data-type="N">
+                                            <input class="scse-form-control" type="text" id="code" required>
+                                            <label class="animated-label" for="code">Código</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_or" class="scse-form-group pt-2" data-control="" data-code="su_or" data-type="N">
+                                            <input class="scse-form-control" type="text" id="org" required>
+                                            <label class="animated-label" for="org">Origen</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_datebg" data-type="N">
+                                            <input class="scse-form-control" type="text" id="datebg" required>
+                                            <label class="animated-label" for="datebg">Fecha de diagnóstico</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_age" data-type="N">
+                                            <input class="scse-form-control" type="text" id="age" required>
+                                            <label class="animated-label" for="age">Edad</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="scse-form-group">
-                                        <input class="scse-form-control" type="text" id="code" required>
-                                        <label class="animated-label" for="@var.Code"></label>
-                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label">Observaciones</label>
+                                        <div class="containerTextarea" style="min-height: 50px;">
+                                            <textarea rows="1" class="form-control" id="BgAlcohol-Observations" name="BgAlcohol-Observations" data-required="true"></textarea>
+                                            <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -194,18 +232,20 @@
 <script src="./lib/tagify/dist/tagify.min.js" type="text/javascript"></script>
 <script src="./lib/tagify/dist/jQuery.tagify.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
+<script src="./js/ExpandableTextArea.js"  type="text/javascript"></script>
 
-<script src="./js/BackgroundControl.js" type="text/javascript"></script>
-<script src="./js/Background.js" type="text/javascript"></script>
-<script src="./js/BackgroundComponent.js" type="text/javascript"></script>
-<script src="./js/ToxicHabitsBackground.js" type="text/javascript"></script>
-<!-- scripting  -->
-<script>
-    $(document).ready(function() {
-        let background = new BackgroundsComponent();
-    })
-</script>
+    <script src="./js/BackgroundControl.js" type="text/javascript"></script>
+    <script src="./js/Background.js" type="text/javascript"></script>
+    <script src="./js/BackgroundComponent.js" type="text/javascript"></script>
+    <script src="./js/ToxicHabitsBackground.js" type="text/javascript"></script>
+    <script src="./js/PathologicalBackground.js" type="text/javascript"></script>
+    <!-- scripting  -->
+    <script>
+        $(document).ready(function() {
+            let background = new BackgroundsComponent();
+        })
+    </script>
 
-<!--  -->
+    <!--  -->
 
-</html
+    </html
