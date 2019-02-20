@@ -1,0 +1,413 @@
+﻿/* Estilos genericos */
+
+.f-left {
+    float: left;
+}
+
+.f-left-treeview {
+    float: left;
+    width: 90%;
+}
+
+.f-right {
+    float: right;
+}
+
+
+/* Contenedor del componente */
+
+.scse-revsnfindings {
+    border: 1px solid #c2c1c7;
+    border-radius: 10px;
+    overflow: hidden;
+	min-height: 489px !important;
+}
+
+.scse-mg-10 {
+    margin: 0px 10px 0px 10px !important;
+}
+
+.scse-revsnfindings:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/***** FINDINGS *******/
+
+.scse-findings {
+    float: right;
+    /*display: inline-block;*/
+    width: 290px !important;
+    background-color: white;
+    border: 1px solid #c2c1c7;
+    margin: 40px 0px;
+    border-radius: 10px;
+}
+
+    .scse-findings .chosen-container {
+        width: 100% !important;
+    }
+
+.hidden {
+    display: none !important;
+}
+
+.scse-findings .fullwidth {
+    width: 100%;
+}
+
+
+
+/***** FINDINGS/ *******/
+
+
+
+/******** IMAGEMAP ***********/
+
+.scse-imagemap {
+    /*background-color: #eee;*/
+    float: left;
+    /*display: inline-block;*/
+    padding: 50px 20px;
+    text-align: center;
+    height: 100% !important;
+}
+
+.scse-imagemap-container {
+    position: relative;
+    display: inline-block;
+    height: 100% !important;
+    padding: 0;
+    margin: 0;
+}
+.scse-imagemap-titulo {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-color: #c1c2c7;
+    border-width: 1px;
+    background-color: white;
+    color: #4d4d4d;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+}
+
+/*
+.scse-imagemap-container img {
+    height: 100%;
+}
+*/
+
+.scse-imagemap-area {
+	position: absolute;
+	/*background-color: orangered;*/
+	/* opacity in older browsers */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	/* opacity in newer browsers */
+	opacity: 0.0;
+}
+
+    .scse-imagemap-area:hover {
+        /* opacity in older browsers */
+		cursor: pointer;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        /* opacity in newer browsers */
+        opacity: 1.0;
+    }
+
+    .scse-imagemap-area.round-top-left {
+        /* border-radius in older browsers */
+        -webkit-border-top-left-radius: 50%;
+        -moz-border-top-left-radius: 50%;
+        /* border-radius in newer browsers */
+        border-top-left-radius: 50%;
+    }
+
+    .scse-imagemap-area.round-top-right {
+        /* border-radius in older browsers */
+        -webkit-border-top-right-radius: 50%;
+        -moz-border-top-right-radius: 50%;
+        /* border-radius in newer browsers */
+        border-top-right-radius: 50%;
+    }
+
+
+/******** IMAGEMAP/ ***********/
+
+
+/******** MENU ***********/
+
+.scse-treeview {
+    float: left;
+    margin-bottom: 15px;
+    width: 380px !important;
+}
+
+.scse-treeview-content {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 1;
+}
+
+    .scse-treeview-content ul,
+    .scse-treeview-content ul li,
+    .scse-treeview-content ul ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .scse-treeview-content ul {
+        position: relative;
+        z-index: 597;
+        float: left;
+    }
+
+        .scse-treeview-content ul li {
+            float: none;
+            min-height: 1px;
+            line-height: 1em;
+            vertical-align: middle;
+            position: relative;
+        }
+
+            .scse-treeview-content ul li.expanded,
+            .scse-treeview-content ul li:hover {
+                position: relative;
+                z-index: 599;
+                cursor: default;
+            }
+
+        .scse-treeview-content ul ul {
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            z-index: 598;
+            width: 100%;
+        }
+
+            .scse-treeview-content ul ul li {
+                float: none;
+            }
+
+            .scse-treeview-content ul ul ul {
+                top: -2px;
+                right: 0;
+            }
+
+        .scse-treeview-content ul li.selected > ul,
+        .scse-treeview-content ul li.expanded > ul,
+        .scse-treeview-content ul li:hover > ul {
+            visibility: visible;
+        }
+
+        .scse-treeview-content ul ul {
+            top: 0px;
+            left: 100%;
+            margin-top: 0px;
+        }
+
+            .scse-treeview-content ul ul li {
+                font-weight: normal;
+            }
+
+
+/* Treeview Custom CSS Styles */
+
+.scse-treeview-content {
+    width: 210px;
+    font-size: 13px;
+	display:block !important;
+}
+
+    .scse-treeview-content:before {
+        content: '';
+        display: block;
+    }
+
+    .scse-treeview-content:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .scse-treeview-content ul {
+        background: white;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .scse-treeview-content > ul {
+        width: 210px;
+        border-right: 1px solid #c2c1c7;
+        border-bottom: 1px solid #c2c1c7;
+    }
+
+    .scse-treeview-content ul ul {
+        width: 210px;
+        background: white;
+    }
+
+    .scse-treeview-content ul li a {
+        display: block;
+        text-decoration: none;
+        color: #4d4d4d;
+        /* padding: y x */
+        padding: 8px 10px;
+    }
+
+    .scse-treeview-content ul li.header {
+        background-color: #93b74b;
+        color: white;
+        overflow: hidden;
+        /* padding: y x */
+        padding: 8px 10px;
+		cursor: pointer;
+    }
+
+        .scse-treeview-content ul li.header:last-child {
+            -webkit-border-bottom-right-radius: 10px;
+            -moz-border-bottom-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+    .scse-treeview-content ul ul {
+        border: 1px solid #c2c1c7;
+    }
+
+    .scse-treeview-content > ul > li.expanded > a,
+    .scse-treeview-content > ul > li.selected > a,
+    .scse-treeview-content > ul > li a:hover {
+        background-color: #e6e6e6;
+        color: #93b74b !important;
+    }
+
+    .scse-treeview-content > ul > li.selected > a {
+        border-left: 4px solid #30add3;
+    }
+
+    .scse-treeview-content > ul > li:last-child > a {
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .scse-treeview-content > ul ul > li:last-child > a {
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .scse-treeview-content > ul ul > li.selected > a {
+        background-color: #e6e6e6;
+        color: #93b74b;
+        border-left: 4px solid #30add3;
+    }
+
+
+    .scse-treeview-content a img {
+        width: auto;
+        height: 15px;
+        float: right;
+    }
+
+    .scse-treeview-content a {
+        height: 35px;
+    }
+
+
+/*
+
+.scse-treeview-content li {
+    position: relative;
+}
+
+.scse-treeview-content ul li.has-sub>a:after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -6px;
+}
+*/
+
+
+
+/******** MENU/ ***********/
+
+/* button all normal */
+.scse-buttonallnormal {
+    float: right;
+    /*display: inline-block;*/
+    width: 160px !important;
+    padding: 30px 0px;
+    margin: 0px;
+    background-color: white;
+    border-radius: 10px;
+    align-self: flex-start;
+    order: 5;
+}
+
+.buttonallnormal {
+    padding: 10px;
+    margin: 0px;
+    background-color: white;
+    border: 1px solid #c2c1c7;
+    border-radius: 18px;
+	font-size: 13px;
+}
+
+.buttonallnormal:hover {
+        background-color: #93b74b;
+        color: white;
+    }
+
+.buttonallnormal:focus {
+       outline:none;
+}
+
+
+/* button all normal */
+
+/******** MENU/ ***********/
+
+
+/* findings resume */
+.titleResume {
+    background-color: #93b74b;
+    width: 100%;
+    color: #ffffff;
+    padding: 3px 8px;
+}
+.areaResume {
+    border: 1px solid #ccc;
+    padding: 8px;
+    max-height: 589px;
+    overflow-y: auto;
+    border-radius: 0px 0px 0px 15px;
+    font-size:13px;
+}
+
+/* findings resume */
+
+.legendContainer {
+    position: absolute;
+    margin-left: 37%;
+    border: 1px solid #c2c1c7;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    width: 300px;
+    height: 25px;
+    padding: 0px 15px;
+    color: #4d4d4d;
+}
+

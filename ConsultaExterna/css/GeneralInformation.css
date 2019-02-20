@@ -1,0 +1,63 @@
+﻿.gi-card {
+    padding: 5px 20px 0px 20px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    color: #4d4d4d;
+}
+    .gi-card label {
+        color: #4d4d4d;
+    }
+
+    .gi-card select {
+        color: #4d4d4d;
+    }
+
+.form-check input[type="radio"] {
+	display: none;
+}
+
+.form-check input[type="radio"] + label::before {
+	content: '';
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin: -1px 4px 0 0;
+	border-radius:50%;
+	border: 1px solid gray;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.form-check input[type="radio"]:checked + label::before {
+	background: url('../images/OK.png') no-repeat 0 0;
+	background-position: center;
+	background-size: 15px;
+	background-color: #95b73f;
+}
+
+.form-check input[type="checkbox"] {
+	display: none;
+}
+
+.form-check input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 4px 0 0;
+    border-radius: 10%;
+    border: 1px solid gray;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.form-check input[type="checkbox"]:checked + label::before {
+        background: url('../images/OK.png') no-repeat 0 0;
+        background-position: center;
+        background-size: 15px;
+        background-color: #95b73f;
+ }

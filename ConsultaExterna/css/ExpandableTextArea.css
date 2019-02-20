@@ -1,0 +1,31 @@
+﻿.containerTextarea {
+    position: relative;
+}
+
+    .containerTextarea label {
+        color: #4d4d4d;
+    }
+    .containerTextarea textarea {
+        width: 100%;
+        min-height: 60px;
+        resize: none;
+        box-sizing: border-box;
+        border-radius: 1.25rem .25rem 1.25rem 1.25rem;
+        font-size: inherit;
+        color: #4d4d4d;
+    }
+
+        .containerTextarea textarea.expandedtextarea {
+            height: 40vh;
+        }
+
+    .containerTextarea img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2px;
+        height: 15px;
+        width: 18px;
+        border-radius: 0 .25rem 0 .25rem;
+        background-color: #95b73f;
+    }

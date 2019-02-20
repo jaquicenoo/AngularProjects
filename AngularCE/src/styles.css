@@ -1,1 +1,985 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/*estilos para el form group floating label input y select*/
+
+.scse-form-group {
+    position: relative;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+.scse-form-group select+.animated-label {
+    width: fit-content;
+}
+
+.scse-form-group .animated-label {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    font-weight: 300;
+    opacity: 0.5;
+    cursor: text;
+    transition: 0.2s ease all;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.scse-form-group .animated-label:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    height: 2px;
+    width: 10px;
+    visibility: hidden;
+    background-color: #c1c1c1;
+    transition: 0.2s ease all;
+}
+
+.scse-form-group.not-empty .animated-label {
+    top: 0;
+    font-size: 12px;
+}
+
+.scse-form-group .scse-form-control {
+    width: 100%;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 0;
+    border-width: 0 0 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    height: auto;
+    padding: 3px 0 5px;
+}
+
+.scse-form-group .scse-form-control.active,
+.scse-form-group .scse-form-control:focus:not(.select),
+.scse-form-group .scse-form-control:valid:not(.select) {
+    box-shadow: none;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.scse-form-group .scse-form-control.active~.animated-label,
+.scse-form-group .scse-form-control:focus:not(.select)~.animated-label,
+.scse-form-group .scse-form-control:valid:not(.select)~.animated-label {
+    top: 0;
+    opacity: 1;
+    color: #979494;
+    font-size: 12px;
+}
+
+.scse-form-group.show-alert .animated-label::after {
+    visibility: visible;
+    width: 100%;
+    left: 0;
+}
+
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* @font-face {
+    font-family: 'GothamLight';
+    src: url('./assets/gotham/Gotham-Light.otf') format('truetype'), url('./assets/gotham/Gotham-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('./assets/fonts/gotham/GothamBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('./assets/fonts/gotham/GothamBold.ttf') format('truetype'), url('./assets/gotham/Gotham-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'GothamBook', sans-serif !important;
+    color: #4d4d4d !important;
+}
+
+
+/* Wrapping element */
+
+
+/* Set some basic padding to keep content from hitting the edges */
+
+.body-content {
+    padding: 5px;
+    /*padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;*/
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+footer {
+    /*position: fixed;*/
+    /*height: 100px;*/
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Carousel */
+
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* Make .svg files in the carousel display properly in older browsers */
+
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+
+/* QR code generator */
+
+#qrCode {
+    margin: 15px;
+}
+
+
+/* Hide/rearrange for smaller screens */
+
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.nodecor {
+    text-decoration: none;
+}
+
+
+/* ************************ */
+
+
+/* Personalizaciones tagify */
+
+
+/* ************************ */
+
+.tagify tag>div>* {
+    white-space: normal;
+}
+
+.tagify tag {
+    margin: 5px;
+}
+
+
+/***********/
+
+
+/* SideBar */
+
+
+/***********/
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    background: #c2c1c7;
+    display: block;
+    width: 52px;
+    transition: all 0.2s;
+}
+
+#sidebar-container.expanded {
+    width: 208px;
+}
+
+#sidebar-fixed {
+    position: fixed;
+}
+
+.sidebar-block {
+    padding: 10px 10px;
+}
+
+.sidebar-block:hover {
+    background-color: #d6d5d9;
+}
+
+#sidebar {
+    min-width: 180px;
+    max-width: 180px;
+    background: #c2c1c7;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.sidebar-ico {
+    width: 30px !important;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.sidebar-menu-ico {
+    width: 30px !important;
+}
+
+#sidebar .sidebar-block .glyphicon {
+    color: #fff;
+}
+
+#sidebar .sidebar-block .sidebar-item-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: white;
+}
+
+#sidebar .sidebar-block a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sidebar.active .sidebar-block .sidebar-item-text {
+    display: none;
+}
+
+
+/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+
+#sidebar.active {
+    min-width: 50px;
+    max-width: 50px;
+    text-align: center;
+}
+
+
+/* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+
+#sidebar .sidebar-header {
+    background-color: #95b73f;
+}
+
+#sidebar .sidebar-header .sidebarCollapse {
+    cursor: pointer;
+    width: 100%;
+}
+
+#sidebar .sidebar-header #btnExpandSideBar {
+    display: none;
+}
+
+#sidebar.active .sidebar-header #btnExpandSideBar {
+    display: block;
+}
+
+#btnCollapseSideBar {
+    margin-left: auto;
+    margin-right: 0px;
+    display: inline-block;
+}
+
+#sidebar .sidebar-header #btnCollapseSideBar {
+    display: inline-block;
+}
+
+#sidebar.active .sidebar-header #btnCollapseSideBar {
+    display: none;
+}
+
+#sidebar .sidebar-header strong {
+    display: inline-block;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: none;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#sidebar ul li ul li a {
+    font-size: 0.85em;
+    padding: 10px 10px 5px 40px;
+}
+
+#sidebar.active ul li ul li a {
+    font-size: 0.70em;
+    padding: 10px 5px 5px 5px;
+}
+
+
+/* Changing the arrow position to bottom center position, 
+   translateX(50%) works with right: 50% 
+   to accurately  center the arrow */
+
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+
+/* glyphicon  sizes */
+
+.gi-2x {
+    font-size: 2em;
+}
+
+.gi-3x {
+    font-size: 3em;
+}
+
+.gi-4x {
+    font-size: 4em;
+}
+
+.gi-5x {
+    font-size: 5em;
+}
+
+@media (max-width: 300px) {
+    /* 80px and its content aligned to centre. Pushing it off the screen with the
+       negative left margin
+    */
+    #sidebar.active {
+        min-width: 50px;
+        max-width: 50px;
+        text-align: center;
+        margin-left: -70px !important;
+    }
+    /* Reappearing the sidebar on toggle button click */
+    #sidebar {
+        margin-left: 0;
+    }
+    /* Toggling the sidebar header content, 
+       hide the big heading [h3] and showing the small heading [strong] and vice versa
+    */
+    #sidebar .sidebar-header strong {
+        display: inline;
+    }
+    #sidebar.active .sidebar-header strong {
+        display: none;
+    }
+    /* Downsize the navigation links font size */
+    #sidebar.active ul li a {
+        padding: 20px 10px;
+        font-size: 0.85em;
+    }
+    /* Adjust the dropdown links padding*/
+    #sidebar.active ul ul a {
+        padding: 10px !important;
+    }
+    /* Changing the arrow position to bottom center position, 
+      translateX(50%) works with right: 50% 
+      to accurately  center the arrow */
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+}
+
+
+/* estilos para la miga de pan
+
+.container-steper {
+    width: 100%;
+    margin: 15px 0px 15px 0px;
+}
+
+.stepbar {
+    counter-reset: step;
+    width: 100%;
+    height: 90px;
+    margin: 0px;
+}
+
+.stepbar li {
+    list-style-type: none;
+    width: 12%;
+    float: left;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    color: #4d4d4d;
+    word-spacing: 7px;
+}
+
+.stepbar li a {
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.stepbar li.active a {
+    color: #2fadd3;
+}
+
+.stepbar span {
+    padding: 0px 7px 0px 7px;
+}
+
+.stepbar li:first-child span {
+    word-spacing: 9px;
+    padding: 0px 12px 0px 12px;
+}
+
+.stepbar li::before {
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    border: 2px solid #a9a9a7;
+    content: '';
+    counter-increment: step;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+}
+
+.stepbar li.info::before {
+    background: url('../images/Info.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 22px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.antecedent::before {
+    background: url('../images/Folder.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 35px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.sistems::before {
+    background: url('../images/Revision.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 22px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.physical-exam::before {
+    background: url('../images/Examen.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 32px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.results::before {
+    background: url('../images/Lupa.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 32px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.scales::before {
+    background: url('../images/Escalas.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 18px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.dyacnostics::before {
+    background: url('../images/Diagnostico.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 32px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li.handler::before {
+    background: url('../images/OK.png') no-repeat 0 0;
+    background-position: center;
+    background-size: 32px;
+    background-color: #a9a9a7;
+}
+
+.stepbar li:hover::before {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #2fadd3;
+    border-color: #2fadd3;
+}
+
+.stepbar li:hover a {
+    color: #2fadd3;
+}
+
+.stepbar li:hover span {
+    color: #2fadd3;
+}
+
+.stepbar li::after {
+    width: 100%;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background-color: #c2c1c7;
+    top: 20px;
+    left: -50%;
+    z-index: -1;
+}
+
+.stepbar li:first-child:after {
+    content: none;
+}
+
+.stepbar li.active {
+    color: #2fadd3;
+}
+
+.stepbar li.active:before {
+    border-color: #2fadd3;
+    background-color: #2fadd3;
+}
+
+.stepbar li.active+li:after {
+    background-color: cornflowerblue;
+} */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.scse-container-ce {
+    height: 800px;
+    overflow: scroll;
+}
+
+.inputBLine {
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #c2c1c7;
+    width: 100%;
+}
+
+.inputBLine:focus {
+    border-color: #93b74b
+}
+
+.inputBLine:disabled {
+    background-color: transparent;
+}
+
+.scse-select {
+    border: none;
+    border-bottom: 1px solid #c2c1c7;
+    background: url('assets/images/expand.png') no-repeat right;
+    -webkit-appearance: none;
+    background-size: 15px;
+    padding-right: 16px;
+    width: 100%;
+    margin-left: 3px;
+}
+
+.scse-select:focus,
+.scse-select:hover {
+    outline: none;
+    cursor: pointer;
+}
+
+.tooltipContainer {
+    margin: -20px 0 -10px 0;
+}
+
+.tooltip .errorTooltip {
+    z-index: 1000;
+}
+
+.errorTooltip .tooltip-inner {
+    background-color: white;
+    border: 1px solid;
+    border-color: #ea8807;
+    color: #ea8807;
+}
+
+.infoTooltip .tooltip-inner {
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 2px!important;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    font-size: 7pt!important;
+    border-radius: .25rem;
+}
+
+.errorTooltip .tooltip-arrow {
+    border-bottom: 1px solid #f47e49;
+}
+
+.errorTooltip .arrow::before {
+    border-top-color: #ea8807;
+}
+
+
+/*.errorTooltip .tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+    margin-left: -3px;
+    content: "";
+    border-width: 0 5px 5px;
+    border-bottom-color: red;
+}*/
+
+.circleButton {
+    /*//background-image: url(../images/Firmaoffxxxhdpi.png);*/
+    border: none;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.circleButtonBackColor {}
+
+.signContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.iconCon {
+    font-weight: 600 !important;
+    background-color: white;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 1px 2px;
+    margin-left: -7px;
+    color: #ea8807;
+    font-size: 0.6em !important;
+    width: 12px;
+    height: auto;
+}
+
+.hero {
+    position: relative;
+    background-color: #95b73f;
+    height: 35px !important;
+    width: 200px !important;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.hero:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #95b73f;
+}
+
+.hero img {
+    height: 20px;
+    width: 20px;
+}
+
+.inputSign {
+    outline: 0;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: white;
+    color: white;
+    width: 40%;
+    margin-right: 5px;
+}
+
+.lblSign {
+    color: white;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+[tooltip] {
+    margin: 20px 60px;
+    position: relative;
+    display: inline-block;
+}
+
+[tooltip]::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 6px 0 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+    z-index: 99;
+    opacity: 0;
+}
+
+[tooltip-position='top']::before {
+    left: 50%;
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%) translateY(-100%);
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    padding: 4px 2px;
+    font-size: 12px;
+    min-width: 80px;
+    border-radius: 5px;
+    pointer-events: none;
+    padding: 4px 4px;
+    z-index: 99;
+    opacity: 0;
+}
+
+[tooltip-position='left']::after {
+    left: 0%;
+    top: 50%;
+    margin-left: -8px;
+    transform: translateX(-100%) translateY(-50%);
+}
+
+[tooltip-position='top']::after {
+    left: 50%;
+}
+
+[tooltip-position='buttom']::after {
+    top: 100%;
+    margin-top: 8px;
+    transform: translateX(-50%) translateY(0%);
+}
+
+[tooltip-position='right']::after {
+    left: 100%;
+    top: 50%;
+    margin-left: 8px;
+    transform: translateX(0%) translateY(-50%);
+}
+
+[tooltip]:hover::after,
+[tooltip]:hover::before {
+    opacity: 1
+}
+
+
+/*.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}*/
+
+.signing-card {
+    padding: 5px 5px 0px 20px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    height: 60px;
+}
+
+.signing-container {
+    height: 50px;
+    width: auto;
+    display: grid;
+    /*grid-template-columns: 1fr 60px;*/
+    float: right;
+    justify-content: center;
+}
+
+.stepbar li.bcError:before {
+    border-color: #ea8807;
+    background-color: #ea8807;
+}
+
+.stepbar li.bcError a {
+    color: #ea8807;
+}
+
+.btnmodal-success {
+    background-color: #95b73f;
+    border-color: #95b73f;
+    color: white;
+}
+
+.loader {
+    margin: auto;
+    height: 89px;
+    top: 50%;
+    left: 50%;
+    padding: 2px;
+}
+
+
+/*.sticky-top.imHeader{
+    z-index: 4000;
+}
+
+.modal{
+    z-index: 5000;
+}*/
+
+
+/*desde aqui debo comentar*/
+
+.cardContainer {
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    color: #4d4d4d;
+    width: 700px;
+    min-width: 300px;
+    /*height: 80px;*/
+    color: #4d4d4d;
+}
+
+.diagLeftIcon {
+    position: absolute;
+    left: -1.5em;
+    top: 22%;
+    border-radius: 50%;
+    background-color: white;
+    border: .13em solid #95b73f;
+    height: 3em;
+    width: 3em;
+    align-self: center;
+    color: #95b73f;
+}
+
+.diagLeftIcon .fa {
+    font-size: 32px;
+}
+
+.diagLeftIcon:hover {
+    color: white;
+    background-color: #95b73f;
+}
+
+.roundBtn {
+    border-radius: 50%;
+    background-color: white;
+    border: .13em solid;
+    height: 3em;
+    width: 3em;
+    align-self: center;
+    color: #95b73f;
+    outline: none;
+}
+
+.roundBtn:hover {
+    color: white;
+    background-color: #95b73f;
+}
+
+.roundBtn.gray {
+    color: #c2c1c7;
+}
+
+.roundBtn.red {
+    color: red;
+}
+
+.roundBtn.or {
+    color: orange;
+}
+
+.roundBtn.or:hover {
+    color: white;
+    background-color: orange;
+}
+
+.roundBtn.red:hover {
+    color: white;
+    background-color: orange;
+}
+
+.divCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

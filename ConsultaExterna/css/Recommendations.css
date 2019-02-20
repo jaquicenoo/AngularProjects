@@ -1,0 +1,11 @@
+﻿.RecommendationsContainer {
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #4d4d4d;
+}
+
+    .RecommendationsContainer input {
+        color: #4d4d4d;
+    }

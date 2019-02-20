@@ -1,0 +1,107 @@
+﻿body {
+}
+
+.patient-header-card3 {
+    padding: 5px 5px;
+    position: relative;
+    border: 1.8px solid red;
+    border-radius: 12px;
+    border-color: #a0a0a5;
+    margin: 0px 10px 0px 10px;
+    min-width: 400px;
+    flex: 50%;
+}
+
+    .patient-header-card3.fixed {
+        position: fixed !important;
+        width: 150px !important;
+        top: 0;
+        left: 32px;
+        overflow: hidden;
+        border: none;
+        min-width: 120px;
+        z-index: 1060;
+    }
+
+    .patient-header-card3 .title {
+        float: left;
+        height: 60px;
+        width: 20%;
+        background-color: aqua;
+    }
+
+    .patient-header-card3.fixed .title {
+        height: 60px;
+        width: 60px;
+        background-color: red;
+    }
+
+    .patient-header-card3 .content {
+        float: left;
+        width: 80%;
+    }
+
+    .patient-header-card3.fixed .content {
+        display: none;
+    }
+
+    .patient-header-card3 .pop {
+        display:none;
+    }
+
+    .patient-header-card3.fixed .pop {
+        display: flex;
+    }
+
+    .patient-header-card3.fixed .pinImg {
+        display: none;
+    }
+
+    .patient-header-card3.fixed .patient-photo2 {
+            border-radius: 20%;
+            width: 140px;
+            margin: 0;
+        }
+
+.patient-photoPop {
+    border-radius: 50%;
+    width: 80px;
+    margin: auto;
+}
+
+.patient-header-card3.fixed .patient-photoPop {
+    display: none;
+}
+
+.bubbleText {
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    display: table;
+    height: 90px;
+    font-size: 12px;
+    width:90px;
+}
+
+    .bubbleText div {
+        display: table-cell;
+        vertical-align: middle;
+        overflow:auto;
+    }
+
+    .bubbleText p {
+        font-size: 10px;
+        width: 90px;
+        text-align: center;
+        color: white;
+    }
+
+    .bubbleText .subtitle {
+        color: #4d4d4d;
+        font-weight: bolder;
+        color: white;
+    }
+
+.sticky-offset {
+    top: 10px;
+}

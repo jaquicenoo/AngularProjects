@@ -1,0 +1,27 @@
+$gray:#c2c1c7;
+.bg-tagify {
+    margin: 1em .5em;
+    border: none;
+    width: 98%;
+    margin: 0;
+    float: right;
+    height: 2.7em;
+    position: relative;
+    border-bottom: 1px solid $gray;
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f002";
+        position: absolute;
+        bottom: -0.05em;
+        left: -18px;
+        font-size: 1.3em;
+        color: $gray;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.bg-title.ligth {
+    font-weight: normal;
+    margin-left: 0;
+}

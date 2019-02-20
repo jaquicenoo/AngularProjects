@@ -1,0 +1,74 @@
+//variables
+$gray:#c2c1c7;
+$grenncheck:#95b73f;
+body {
+    font-size: 13px;
+}
+
+.bg-container {
+    border: 1px solid $gray;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 489px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bg-data-container {
+    border: 1px solid $gray;
+    border-radius: 10px;
+    .bg-title {
+        margin: .5em 1em;
+        font-weight: bold;
+    }
+    .bg-field-title {
+        padding: 0 .5em;
+    }
+}
+
+.bg-background-content {
+    padding: 30px;
+}
+
+.form-check {
+    input[type="radio"] {
+        display: none;
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin: -1px 4px 0 0;
+            border-radius: 50%;
+            border: 1px solid gray;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        &:checked+label::before {
+            background: url('../../../assets/images/OK.png') no-repeat 0 0;
+            background-position: center;
+            background-size: 15px;
+            background-color: $grenncheck;
+        }
+    }
+    input[type="checkbox"] {
+        display: none;
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin: -1px 4px 0 0;
+            border-radius: 10%;
+            border: 1px solid gray;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        &:checked+label::before {
+            background: url('../../../assets/images/OK.png') no-repeat 0 0;
+            background-position: center;
+            background-size: 15px;
+            background-color: $grenncheck;
+        }
+    }
+}

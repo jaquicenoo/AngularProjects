@@ -1,0 +1,231 @@
+﻿/*Estilos para diagnosticos*/
+.cardContainer {
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    color: #4d4d4d;
+    /*width: 700px;*/
+    min-width: 300px;
+    /*height: 80px;*/
+    color: #4d4d4d;
+}
+
+
+.diagLeftIcon {
+    position: absolute;
+    left: -1.5em;
+    top: 22%;
+    border-radius: 50%;
+    background-color: white;
+    border: .13em solid #c2c1c7;
+    height: 3em;
+    width: 3em;
+    align-self: center;
+    color: #c2c1c7;
+}
+    .diagLeftIcon .fa {
+        font-size: 24px;
+    }
+
+    .diagLeftIcon:hover {
+        color: white;
+        background-color: #c2c1c7;
+    }
+
+    .diagLeftIcon.green {
+        border: .13em solid #95b73f;
+        color: #95b73f;
+    }
+
+        .diagLeftIcon.green:hover {
+            background-color: #95b73f;
+            color: white;
+        }
+
+    .diagLeftIcon.blue {
+        border: .13em solid #28abe1;
+        color: #28abe1;
+    }
+    .diagLeftIcon.blue:hover {
+        color: white;
+        background-color: #28abe1;
+    }
+
+    
+
+    
+
+
+.roundBtn {
+    border-radius: 50%;
+    background-color: white;
+    border: .13em solid;
+    height: 3em;
+    width: 3em;
+    align-self: center;
+    color: #c2c1c7;
+    outline: none;
+}
+
+    .roundBtn:hover {
+        color: white;
+        background-color: gray;
+    }
+
+    .roundBtn.green {
+        color: #95b73f;
+    }
+
+        .roundBtn.green:hover {
+            color: white;
+            background-color: #95b73f;
+        }
+
+    .roundBtn.gray {
+        color: #c2c1c7;
+    }
+
+    .roundBtn.red {
+        color: red;
+    }
+
+    .roundBtn.or {
+        color: orange;
+    }
+
+        .roundBtn.or:hover {
+            color: white;
+            background-color: #ea8807;
+        }
+
+    .roundBtn.red:hover {
+        color: white;
+        background-color: #ea8807;
+    }
+
+.divCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.diagnosticsContainer {
+    padding: 45px 10px 35px 10px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    color: #4d4d4d;
+    min-width: 400px;
+    /*height: 80px;*/
+    color: #4d4d4d;
+}
+
+.diagnosticsContainerTitle {
+    background-color: #93b74b;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 13px;
+    /*float: left;*/
+    color: white;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 28px;
+    padding: 3px 15px;
+    position: absolute;
+}
+
+.diagnosticsContainer button {
+    outline: none;
+}
+
+.newDiagnosticCard {
+    padding: 10px 20px 5px 20px;
+    position: relative;
+    border: 1px solid #c2c1c7;
+    border-radius: 12px;
+    margin: 0px 10px 0px 10px;
+    font-size: 13px;
+    flex: 50%;
+    color: #4d4d4d;
+    width: 300px;
+    min-width: 320px;
+    /*height: 80px;*/
+    color: #4d4d4d;
+}
+
+    .newDiagnosticCard .body {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+
+        .newDiagnosticCard .body.btnPlus {
+            display: inline-grid;
+            justify-content: flex-end;
+            width: 100%;
+ 
+            }
+
+        .newDiagnosticCard .body label {
+            margin-right: 7px;
+            /*margin-bottom: -7px;*/
+        }
+/*FInal Estilos para diagnosticos*/
+
+.diagnosticsOldAddBtn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: .13em solid #28abe1;
+    height: 27px;
+    width: 27px;
+    align-self: center;
+    color: #28abe1;
+}
+
+    .diagnosticsOldAddBtn:hover {
+        color: white;
+        background-color: #28abe1;
+    }
+
+.diagnosticsModalContainerTitle {
+    background-color: #28abe1;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 9px;
+    color: white;
+    right: 1px;
+    top: 1px;
+    width: 220px;
+    height: 25px;
+    padding: 3px 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.modalButtons{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.diasplayJustification{
+    display: normal;
+}
+
+.hideJustification{
+    display: none;
+}
+

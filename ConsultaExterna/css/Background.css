@@ -1,0 +1,27 @@
+﻿.bg-container {
+    border: 1px solid #c2c1c7;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 489px !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bg-data-container {
+    border: 1px solid #c2c1c7;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+.bg-data-container .bg-title {
+    margin: 0.5em 1em;
+    font-weight: bold;
+}
+
+.bg-data-container .bg-field-title {
+    padding: 0 0.5em;
+}
+
+.bg-background-content {
+    padding: 30px;
+}

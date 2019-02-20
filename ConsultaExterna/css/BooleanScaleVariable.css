@@ -1,0 +1,54 @@
+﻿/* BOOLEAN SCALE VARIABLE */
+
+.scse-bool-scale-var {
+	border: 1px solid #c2c1c7;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 13px;
+}
+
+.scse-bool-scale-left-container {
+	border-right: 1px solid #c2c1c7;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: #93b74b;
+	vertical-align: middle;
+	color: white;
+	width: 71%;
+}
+
+.scse-bool-scale-center-container {
+	padding: 10px 5px 0px 10px;
+	color: black;
+	margin: auto;
+}
+
+.scse-bool-scale-right-container {
+	border-left: 1px solid #c2c1c7;
+	border-top-right-radius: 5px;
+	color: #93b74b;
+	width: 10% !important;
+}
+
+.scse-bool-scale-left-container .spaced-left-container {
+	padding: 10px 10px;
+	display: table;
+	height: 100%;
+}
+
+.scse-bool-scale-right-container .spaced-right-container {
+	padding: 10px 2px;
+	display: table;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+	.scse-bool-scale-left-container .spaced-left-container .vertical-middle,
+	.scse-bool-scale-right-container .spaced-right-container .vertical-middle {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+/* /BOOLEAN SCALE VARIABLE */

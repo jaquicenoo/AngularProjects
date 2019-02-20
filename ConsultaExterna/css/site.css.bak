@@ -1,0 +1,434 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../fonts/gotham/GothamLight.ttf') format('truetype'), url('../fonts/gotham/Gotham-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'GothamLight', sans-serif !important;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding: 5px;
+    /*padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;*/
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+footer {
+    /*position: fixed;*/
+    /*height: 100px;*/
+    bottom: 0;
+    width: 100%;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.nodecor {
+	text-decoration: none;
+}
+
+/***********/
+/* SideBar */
+/***********/
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.sidebar-block {
+    padding: 10px 10px;
+}
+
+    .sidebar-block:hover {
+        background-color: #d6d5d9;
+    }
+
+    #sidebar {
+        min-width: 180px;
+        max-width: 180px;
+        background: #c2c1c7;
+        color: #fff;
+        transition: all 0.2s;
+    }
+
+
+.sidebar-ico {
+    width: 30px !important;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.sidebar-menu-ico {
+    width: 30px !important;
+}
+
+    #sidebar .sidebar-block .glyphicon {
+        color: #fff;
+    }
+
+#sidebar .sidebar-block .sidebar-item-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: white;
+}
+
+    #sidebar .sidebar-block a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    #sidebar.active .sidebar-block .sidebar-item-text {
+        display: none;
+    }
+
+
+    /* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+    #sidebar.active {
+        min-width: 50px;
+        max-width: 50px;
+        text-align: center;
+    }
+
+    /* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+    #sidebar .sidebar-header {
+        background-color: #95b73f;
+    }
+
+        #sidebar .sidebar-header .sidebarCollapse {
+            cursor: pointer;
+            width: 100%;
+        }
+
+
+        #sidebar .sidebar-header #btnExpandSideBar {
+            display: none;
+        }
+
+    #sidebar.active .sidebar-header #btnExpandSideBar {
+        display: block;
+    }
+
+#btnCollapseSideBar {
+    margin-left: auto;
+    margin-right: 0px;
+    display: inline-block;
+}
+
+#sidebar .sidebar-header #btnCollapseSideBar {
+    display: inline-block;
+}
+
+#sidebar.active .sidebar-header #btnCollapseSideBar {
+    display: none;
+}
+
+#sidebar .sidebar-header strong {
+    display: inline-block;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: none;
+}
+
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#sidebar ul li ul li a {
+    font-size: 0.85em;
+    padding: 10px 10px 5px 40px;
+}
+
+#sidebar.active ul li ul li a {
+    font-size: 0.70em;
+    padding: 10px 5px 5px 5px;
+}
+
+
+/* Changing the arrow position to bottom center position, 
+   translateX(50%) works with right: 50% 
+   to accurately  center the arrow */
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+/* glyphicon  sizes */
+.gi-2x {
+    font-size: 2em;
+}
+
+.gi-3x {
+    font-size: 3em;
+}
+
+.gi-4x {
+    font-size: 4em;
+}
+
+.gi-5x {
+    font-size: 5em;
+}
+
+
+@media (max-width: 300px) {
+    /* 80px and its content aligned to centre. Pushing it off the screen with the
+       negative left margin
+    */
+    #sidebar.active {
+        min-width: 50px;
+        max-width: 50px;
+        text-align: center;
+        margin-left: -70px !important;
+    }
+
+
+    /* Reappearing the sidebar on toggle button click */
+    #sidebar {
+        margin-left: 0;
+    }
+
+
+        /* Toggling the sidebar header content, 
+       hide the big heading [h3] and showing the small heading [strong] and vice versa
+    */
+        #sidebar .sidebar-header strong {
+            display: inline;
+        }
+
+
+        #sidebar.active .sidebar-header strong {
+            display: none;
+        }
+
+        /* Downsize the navigation links font size */
+        #sidebar.active ul li a {
+            padding: 20px 10px;
+            font-size: 0.85em;
+        }
+
+        /* Adjust the dropdown links padding*/
+        #sidebar.active ul ul a {
+            padding: 10px !important;
+        }
+
+    /* Changing the arrow position to bottom center position, 
+      translateX(50%) works with right: 50% 
+      to accurately  center the arrow */
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+}
+/*estilos para la miga de pan*/
+.container-steper {
+    width: 100%;
+    margin: 40px 0px 40px 0px;
+}
+
+.stepbar {
+    counter-reset: step;
+    width: 100%;
+    margin: 0px;
+}
+
+    .stepbar li {
+        list-style-type: none;
+        width: 12%;
+        float: left;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        color: #a9a9a7;
+        word-spacing: 7px;
+    }
+
+    .stepbar span {
+        padding: 0px 7px 0px 7px;
+    }
+
+    .stepbar li:first-child span {
+        word-spacing: 9px;
+        padding: 0px 12px 0px 12px;
+    }
+
+    .stepbar li::before {
+        width: 48px;
+        height: 48px;
+        line-height: 30px;
+        border: 2px solid #a9a9a7;
+        content: '';
+        counter-increment: step;
+        display: block;
+        text-align: center;
+        margin: 0 auto 10px auto;
+        border-radius: 50%;
+    }
+	.stepbar li.info::before {
+		background: url('../images/Info.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 25px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.antecedent::before {
+		background: url('../images/Folder.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 35px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.sistems::before {
+		background: url('../images/Revision.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 25px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.physical-exam::before {
+		background: url('../images/Examen.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 35px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.results::before {
+		background: url('../images/Lupa.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 35px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.scales::before {
+		background: url('../images/Escalas.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 20px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.dyacnostics::before {
+		background: url('../images/Diagnostico.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 35px;
+		background-color: #a9a9a7;
+	}
+	.stepbar li.handler::before {
+		background: url('../images/OK.png') no-repeat 0 0;
+		background-position: center;
+		background-size: 35px;
+		background-color: #a9a9a7;
+	}
+
+	.stepbar li:hover::before {
+		cursor: pointer;
+		background-color: #2fadd3;
+		border-color: #2fadd3;
+	}
+
+    .stepbar li::after {
+        width: 100%;
+        height: 3px;
+        content: '';
+        position: absolute;
+        background-color: #c2c1c7;
+        top: 22px;
+        left: -50%;
+        z-index: -1;
+    }
+
+    .stepbar li:first-child:after {
+        content: none;
+    }
+
+    .stepbar li.active {
+        color: #2fadd3;
+    }
+
+        .stepbar li.active:before {
+            border-color: #2fadd3;
+            background-color: #2fadd3;
+        }
+
+        .stepbar li.active + li:after {
+            background-color: cornflowerblue;
+        }
+
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.fast {
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+}
+
+.scse-container-ce {
+	height : 800px;
+	overflow:scroll;
+}
+

@@ -1,0 +1,35 @@
+﻿.tagify tag > div {
+	background-color: #8eb552;
+	border-color: #8eb552;
+	/*padding-top: 2px;
+    padding-bottom: 2px;*/
+	color: white;
+}
+
+.tagify tag x {
+	color: white;
+}
+
+.findings-group .tagify {
+	font-size: 13px;
+}
+
+.scalesCollapsible {
+    background-color: #8eb552;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    width: 98.5%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 0px 0px 5px 10px;
+}
+.scalesContent {
+    display:none;
+    padding: 0px;
+    overflow: hidden;
+    
+}

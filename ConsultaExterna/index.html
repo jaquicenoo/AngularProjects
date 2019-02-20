@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+    <link href="./lib/tagify/dist/tagify.css" rel="stylesheet" />
+    <link href="./css/HeaderPatient.css" rel="stylesheet" />
+    <link href="./css/Header2.css" rel="stylesheet" />
+    <link href="./css/GeneralInformation.css" rel="stylesheet" />
+    <link href="./css/ExpandableTextArea.css" rel="stylesheet" />
+    <link href="./css/Recommendations.css" rel="stylesheet" />
+    <link href="./css/Diagnostics.css" rel="stylesheet" />
+    <link href="./css/AnalysisAndManagementPlan.css" rel="stylesheet" />
+    <link href="./css/chosen.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/RevisionsAndFindings.css" rel="stylesheet" />
+    <link href="./css/scales.css" rel="stylesheet" />
+    <link href="./css/VitalSigns.css" rel="stylesheet" />
+    <link href="./css/Background.css" rel="stylesheet" />
+    <link href="./css/ExternalCause.css" rel="stylesheet" />
+    <link href="./css/wave.css" rel="stylesheet" />
+    <link href="./css/homeControllerPatientAtentionView.css" rel="stylesheet" />
+    <link href="./css/jquery.loadingModal.css" rel="stylesheet" />
+    <link href="./css/BooleanScaleVariable.css" rel="stylesheet" />
+    <link href="./css/switch.css" rel="stylesheet" />
+
+    <link href="./css/Background.css" rel="stylesheet" />
+    <link href="./scss/hospitalarios/hospitalarios.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- componente de antecedentes-->
+
+    <div id="backgroundComponent" class="bg-container">
+        <div class="row">
+            <div class="col-md-2">
+                <div id="scales-treeview" class="scse-treeview">
+                    <div class="scse-treeview-content">
+                        <ul class="nav nav-pills scse-scale-tree" id="tabList" role="tablist">
+                            <li class="header">
+                                <span class="f-left-treeview">
+                                    Escalas de valoración
+                                </span>
+                            </li>
+                            <li class="scse-inactive">
+                                <a href="" role="tab" data-toggle="tab">
+                                    <span class="f-left-treeview text-truncate">Grupo sanguineo</span>
+                                    <span class="f-right">
+                                        <i class="fa fa-plus fa-lg scse-plus"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="scse-inactive">
+                                <a href="" role="tab" data-toggle="tab">
+                                    <span class="f-left-treeview text-truncate">Alergicos</span>
+                                    <span class="f-right">
+                                        <i class="fa fa-plus fa-lg scse-plus"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="scse-inactive">
+                                <a href="" role="tab" data-toggle="tab">
+                                    <span class="f-left-treeview text-truncate">Hospitalarios</span>
+                                    <span class="f-right">
+                                        <i class="fa fa-plus fa-lg scse-plus"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 p-4">
+                <div class="bg-data-container">
+                    <!-- componente de grupo sanguineo -->
+                    <div id="bgbloodtype" data-background="" class="bg-data-container">
+                        <label class="bg-title">Grupo Sanguineo</label>
+                        <div class="row mx-1">
+                            <div class="col-md-7 mt-2 mb-3">
+                                <div id="bt_GRUSA" data-control="" data-code="GRUSA" data-type="CG" class="d-flex">
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="GRUSA" id="GRSO" value="" data-description="">
+                                        <label class="form-check-label" for="GRSO">O</label>
+                                    </div>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="GRUSA" id="GRSA" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="GRSA">A</label>
+                                    </div>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="GRUSA" id="GRSB" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="GRSB">B</label>
+                                    </div>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="GRUSA" id="GRSAB" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="GRSAB">AB</label>
+                                    </div>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="GRUSA" id="GRSSI" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="GRSSI">Sin informacion</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-2 mb-3">
+                                <div id="bt_RH" data-code="RH" data-control="" data-type="CG" class="d-flex">
+                                    <strong class="bg-field-title">RH: </strong>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="RH" id="POSITIVO" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="POSITIVO">Positivo</label>
+                                    </div>
+                                    <div class="form-check form-check-inline flex-fill">
+                                        <input class="form-check-input" type="radio" name="RH" id="NEGATIVO" value="" data-description="" checked="">
+                                        <label class="form-check-label" for="NEGATIVO">Negativo</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                            </div>
+                        </div>
+                    </div>
+                    <!--aca termina grupo sanguineo  -->
+                </div>
+                <!-- hospitalarios  -->
+                <div id="bghospitable" data-background="" class="bg-data-container">
+                    <label class="bg-title">Hospitalarios:</label>
+                    <div class="row mx-1">
+                        <div class="col-md-12 mb-2">
+                            <div id="h_tagify" data-control="" data-code="" data-type="TF">
+                                <input class="bg-tagify" type="text" name="tagify" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--fin hospitalarios  -->
+                <div id="bgsurgical" data-background="" class="bg-data-container">
+                    <label class="bg-title">Quirurgicos</label>
+                    <div class="row m-1">
+                        <div class="col-md-5">
+                            <div id="su_back" data-code="bagcground" data-control="" data-type="CG" class="d-flex">
+                                <label class="bg-title ligth">Antecendentes</label>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="si" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="si">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="no" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="no">No</label>
+                                </div>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="noref" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="noref">No refiere</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row m-1">
+                                <div class="col-md-6 p-0">
+                                    <div id="su_tagify" data-control="" data-code="" data-type="TF">
+                                        <input class="bg-tagify" type="text" name="tagify" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="scse-form-group">
+                                        <input class="scse-form-control" type="text" id="code" required>
+                                        <label class="animated-label" for="@var.Code"></label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- scripts principales -->
+<script src="./lib/jquery/dist/jquery.js"></script>
+<!-- @*<script src="https://cdnjs.cloudflare.cjom/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>*@ -->
+<script src="./lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="./lib/jquery/dist/jquery-ui.js"></script>
+<!-- @*<script src="./lib/bootstrap4/js/bootstrap.min.js"></script>*@ -->
+<!-- @*<script src="./lib/bootstrap/dist/js/bootstrap.js"></script>*@ -->
+<script src="./js/vendor-validation.min.js" asp-append-version="true"></script>
+<script src="./js/vendor.min.js" asp-append-version="true"></script>
+<script src="./js/site.js" asp-append-version="true"></script>
+<!-- fin scripts pincipales -->
+<script src="./lib/tagify/dist/tagify.min.js" type="text/javascript"></script>
+<script src="./lib/tagify/dist/jQuery.tagify.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
+
+<script src="./js/BackgroundControl.js" type="text/javascript"></script>
+<script src="./js/Background.js" type="text/javascript"></script>
+<script src="./js/BackgroundComponent.js" type="text/javascript"></script>
+<script src="./js/ToxicHabitsBackground.js" type="text/javascript"></script>
+<!-- scripting  -->
+<script>
+    $(document).ready(function() {
+        let background = new BackgroundsComponent();
+    })
+</script>
+
+<!--  -->
+
+</html

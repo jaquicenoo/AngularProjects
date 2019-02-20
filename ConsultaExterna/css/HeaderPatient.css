@@ -1,0 +1,160 @@
+﻿.flex {
+	display: flex;
+}
+
+.patient-header-card {
+	padding: 10px 15px;
+	position: relative;
+	border: 1px solid #a0a0a5;
+	border-radius: 12px;
+	margin: 0px 10px 0px 10px;
+	flex: 50%;
+	max-width: 50%;
+	min-width: 400px;
+}
+
+
+.patient-photo {
+	border-radius: 50%;
+	width: 110px;
+	margin: auto;
+}
+
+.card-title h1 {
+	color: #a9a9a7;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin: 0px !important;
+}
+
+.card-titleNoMargin {
+    margin-bottom: 0;
+}
+
+.padding-button {
+	margin-bottom: 10px !important;
+	padding: unset;
+}
+
+.padding-Title {
+    margin-bottom: 3px !important;
+    padding: unset;
+}
+
+.nopadding {
+	padding: 0px 5px 0px 5px !important;
+	margin: auto !important;
+}
+
+.patient-header-card .content {
+	text-align: left;
+	flex: 50%;
+	min-width: 50%;
+}
+
+.alert-panel {
+	/*width: 10%;
+	padding: 0px;
+	margin-left: 10px;
+	align-content: stretch;
+	flex-wrap: wrap;
+	opacity: 0.6;*/
+}
+
+	.alert-panel i {
+		font-size: 18px;
+	}
+
+.margin-card {
+    border-right: 1px solid #a0a0a5;
+    height: 80px;
+    padding-right: 0px;
+}
+
+p {
+	font-size: 12px;
+	margin: 0;
+}
+
+.subtitle {
+    color: #4d4d4d;
+    font-weight: bolder;
+}
+
+.textCollapse {
+    margin-left: 20px;
+    height: 20px
+}
+
+
+/*----------------------------------*/
+.patient-header-card2 {
+	padding: 5px 5px;
+	position: relative;
+	border: 1px solid #a0a0a5;
+	border-radius: 12px;
+	margin: 0px 10px 0px 10px;
+	flex: 50%;
+	min-width: 400px;
+}
+
+.patient-header-cardmini {
+	padding: 2px 2px;
+	position: relative;
+	border: 1px solid #e6e6e6;
+	border-radius: 12px;
+	margin: 0px 10px 0px 10px;
+	flex: 50%;
+	min-width: 400px;
+	background: #e6e6e6 /*linear-gradient(90deg, #FFFFFF 1%, #a9a9a7 50%);*/
+}
+
+.patient-img-back-left-radius {
+	background-color: white;
+	width: 50px;
+	border-radius: 9px 0 0 9px;
+	padding: 4px 5px;
+}
+
+.patient-photo2 {
+	border-radius: 50%;
+	width: 70px;
+	margin: auto;
+	margin-bottom: 1.5px;
+}
+
+.patient-photo3 {
+    border-radius: 50%;
+    width: 40px;
+    margin: auto;
+}
+
+.margin-pinfo {
+    border-right: 1px solid #a0a0a5;
+    padding-right: 0px;
+}
+
+.pinImg {
+    position: absolute;
+    right: 32px;
+    top: 2px;
+    height: 15px;
+    width: 15px;
+}
+
+.pinImgMini {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    height: 15px;
+    width: 15px;
+}
+
+.pinImgT {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 15px;
+    width: 15px;
+}
+
