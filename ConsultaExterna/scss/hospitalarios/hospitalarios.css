@@ -35,4 +35,12 @@
   top: -4px;
 }
 
+.striped-border {
+  border: 1px dashed #c2c1c7;
+  width: 95%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 /*# sourceMappingURL=hospitalarios.css.map */
