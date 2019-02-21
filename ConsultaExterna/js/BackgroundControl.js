@@ -1,8 +1,9 @@
 ﻿// clase generica para los controles 
 
-function BackgroundControl(id, type, code) {
+function BackgroundControl(id, type, code, idParent) {
     this.id = id;
     this.code = code;
+    this.idParent = idParent;
     this.type = type;
     this.control = null;
     this._valid = true;
@@ -36,7 +37,7 @@ BackgroundControl.prototype = {
 };
 // control init 
 BackgroundControl.prototype.init = function() {
-    this.control = document.getElementById(this.id);
+    this.control = document.getElementById(this.idParent).querySelector('#' + this.id);
     if (this.control.dataset.type === "TF") {
         this.tagify = new Tagify(this.control.querySelector('input'), {
             whitelist: [],
@@ -48,22 +49,44 @@ BackgroundControl.prototype.init = function() {
 };
 
 // obtiene el valor segun el tipo de control
-BackgroundControl.getValueBytype = function() {
+BackgroundControl.prototype.getValueBytype = function() {
 
-    switch (this.control.type) {
+    switch (this.type) {
         case 'GB':
             this._value = this.control.querySelector('input [type="radio"]:cheked').value;
+            break;
+        case 'TF':
+            this._value = this.tagify.value;
+            break;
+        case 'TB':
+            this._value = this.control.querySelector('input').value;
+            break;
+        case 'TA':
+            this._value = this.control.querySelector('textarea').value;
             break;
         default:
     }
     return this._value;
 };
 // setea el valor segun el tipo de control
-BackgroundControl.setValueBytype = function(value) {
+BackgroundControl.prototype.setValueBytype = function(value) {
 
-    switch (this.control.type) {
+    switch (this.type) {
         case 'GB':
             this.control.querySelector('input [type="radio"]:cheked').value = value;
+            break;
+        case 'TF':
+            this.tagify.removeAllTags();
+            if (!value) return;
+            value.forEach(tag => {
+                this.tagify.addTags(tag.value);
+            }, this);
+            break;
+        case 'TB':
+            this.control.querySelector('input').value = value;
+            break;
+        case 'TA':
+            this.control.querySelector('textarea').value = value;
             break;
         default:
     }

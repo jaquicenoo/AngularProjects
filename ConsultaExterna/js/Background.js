@@ -33,7 +33,7 @@ Background.prototype.init = function() {
     // creación de cada control
     this.control.querySelectorAll('[data-control]').forEach(function(control) {
         let data = control.dataset;
-        this.controls.push(new BackgroundControl(control.id, data.type, data.code));
+        this.controls.push(new BackgroundControl(control.id, data.type, data.code, this.code));
     }, this);
 
 };

@@ -34,13 +34,22 @@
 .bg-data-container .scse-form-group .scse-form-control:valid:not(.select) ~ .animated-label {
   top: -4px;
 }
+.bg-data-container .plus-bottom.stiky {
+  position: absolute;
+  right: -4em;
+  bottom: 0;
+  color: #ea8807;
+  border-color: #ea8807;
+}
+.bg-data-container .plus-bottom.stiky:hover {
+  background-color: #ea8807;
+  color: white;
+}
 
 .striped-border {
   border: 1px dashed #c2c1c7;
   width: 95%;
-  margin: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 1em auto;
 }
 
 /*# sourceMappingURL=hospitalarios.css.map */

@@ -144,19 +144,19 @@
                     </button>
                     <div class="row m-1">
                         <div class="col-md-5">
-                            <div id="su_back" data-code="bagcground" data-control="" data-type="CG" class="d-flex">
+                            <div id="pa_back" data-code="bagcground" data-control="" data-type="CG" class="d-flex">
                                 <label class="bg-title ligth">Antecendentes</label>
                                 <div class="form-check form-check-inline flex-fill">
-                                    <input class="form-check-input" type="radio" name="su_back" id="si" value="" data-description="" checked="">
-                                    <label class="form-check-label" for="si">Si</label>
+                                    <input class="form-check-input" type="radio" name="pa_back" id="pac_si" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="pac_si">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline flex-fill">
-                                    <input class="form-check-input" type="radio" name="su_back" id="no" value="" data-description="" checked="">
-                                    <label class="form-check-label" for="no">No</label>
+                                    <input class="form-check-input" type="radio" name="pa_back" id="pac_no" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="pac_no">No</label>
                                 </div>
                                 <div class="form-check form-check-inline flex-fill">
-                                    <input class="form-check-input" type="radio" name="su_back" id="noref" value="" data-description="" checked="">
-                                    <label class="form-check-label" for="noref">No refiere</label>
+                                    <input class="form-check-input" type="radio" name="pa_back" id="pac_noref" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="pac_noref">No refiere</label>
                                 </div>
                             </div>
                         </div>
@@ -164,100 +164,226 @@
                             <div class="col-md-9">
                                 <div class="row">
                                     <div class="col-md-8 pl-4">
-                                        <div id="su_tagify" data-control="" data-code="" data-type="TF">
-                                            <input class="bg-tagify" type="text" name="tagify" value="" />
+                                        <div id="pa_tagify" data-control="" data-code="pac_tagify" data-type="TF">
+                                            <input class="bg-tagify" type="text" name="pac_tagify" value="" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_code" data-type="N">
-                                            <input class="scse-form-control" type="text" id="code" required>
-                                            <label class="animated-label" for="code">Código</label>
+                                        <div id="pa_code" class="scse-form-group pt-2" data-control="" data-code="pac_code" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="pac_code" required>
+                                            <label class="animated-label" for="pac_code">Código</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_or" class="scse-form-group pt-2" data-control="" data-code="su_or" data-type="N">
-                                            <input class="scse-form-control" type="text" id="org" required>
-                                            <label class="animated-label" for="org">Origen</label>
+                                        <div id="pa_org" class="scse-form-group pt-2" data-control="" data-code="pac_org" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="pac_org" required>
+                                            <label class="animated-label" for="pac_org">Origen</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_datebg" data-type="N">
-                                            <input class="scse-form-control" type="text" id="datebg" required>
-                                            <label class="animated-label" for="datebg">Fecha de diagnóstico</label>
+                                        <div id="pa_datebg" class="scse-form-group pt-2" data-control="" data-code="pac_datebg" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="pac_datebg" required>
+                                            <label class="animated-label" for="pac_datebg">Fecha de diagnóstico</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_age" data-type="N">
-                                            <input class="scse-form-control" type="text" id="age" required>
-                                            <label class="animated-label" for="age">Edad</label>
+                                        <div id="pa_age" class="scse-form-group pt-2" data-control="" data-code="pac_age" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="pac_age" required>
+                                            <label class="animated-label" for="pac_age">Edad</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                <div id="pa_Observations" data-control="" data-code="pac_Observations" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
                                     <div class="form-group">
                                         <label class="col-form-label">Observaciones</label>
                                         <div class="containerTextarea" style="min-height: 50px;">
-                                            <textarea rows="1" class="form-control" id="BgAlcohol-Observations" name="BgAlcohol-Observations" data-required="true"></textarea>
+                                            <textarea rows="1" class="form-control" id="pac_Observations" name="pac_Observations" data-required="true"></textarea>
                                             <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <hr class="striped-border">
                         </div>
-                        <hr class="striped-border">
-                        <div class="row m-1  animated fadeIn fast">
+                        <div class="row m-1 hidden  animated fadeIn fast" data-clone="">
                             <div class="col-md-9">
                                 <div class="row">
                                     <div class="col-md-8 pl-4">
-                                        <div id="su_tagify" data-control="" data-code="" data-type="TF">
-                                            <input class="bg-tagify" type="text" name="tagify" value="" />
+                                        <div data-control-clone="" data-code="tagify" data-type="TF">
+                                            <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_code" data-type="N">
-                                            <input class="scse-form-control" type="text" id="code" required>
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="code" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="code" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_or" class="scse-form-group pt-2" data-control="" data-code="su_or" data-type="N">
-                                            <input class="scse-form-control" type="text" id="org" required>
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="org" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="org" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_datebg" data-type="N">
-                                            <input class="scse-form-control" type="text" id="datebg" required>
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="datebg" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="datebg" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="su_age" data-type="N">
-                                            <input class="scse-form-control" type="text" id="age" required>
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="age" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="age" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                <div data-control-clone="" data-code="Observations" data-type="TA" class="ExpandableTextArea position-relative" data-expandedclass="col-12" data-defaultclass="col-6">
                                     <div class="form-group">
                                         <label class="col-form-label">Observaciones</label>
                                         <div class="containerTextarea" style="min-height: 50px;">
-                                            <textarea rows="1" class="form-control" id="BgAlcohol-Observations" name="BgAlcohol-Observations" data-required="true"></textarea>
+                                            <textarea rows="1" class="form-control" data-idcontrol="Observations" name="pac_Observations" data-required="true"></textarea>
+                                            <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
+                                        </div>
+                                        <button class="plus-bottom stiky float-right" type="button">
+                                            <i class="fa fa-close" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="striped-border">
+                        </div>
+                    </div>
+                </div>
+                <!-- fin patologicos -->
+                <!-- inicio quirurgicos -->
+                <div id="bgsurgical" data-background="" class="bg-data-container">
+                    <label class="bg-title">Patologicos</label>
+                    <button class="plus-bottom float-right m-2" type="button">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                    <div class="row m-1">
+                        <div class="col-md-5">
+                            <div id="su_back" data-code="bagcground" data-control="" data-type="CG" class="d-flex">
+                                <label class="bg-title ligth">Antecendentes</label>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="suc_si" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="suc_si">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="suc_no" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="suc_no">No</label>
+                                </div>
+                                <div class="form-check form-check-inline flex-fill">
+                                    <input class="form-check-input" type="radio" name="su_back" id="suc_noref" value="" data-description="" checked="">
+                                    <label class="form-check-label" for="suc_noref">No refiere</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-1 hidden animated fadeIn fast" data-expand="">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-8 pl-4">
+                                        <div id="su_tagify" data-control="" data-code="suc_tagify" data-type="TF">
+                                            <input class="bg-tagify" type="text" name="suc_tagify" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="suc_code" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="suc_code" required>
+                                            <label class="animated-label" for="suc_code">Código</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_org" class="scse-form-group pt-2" data-control="" data-code="suc_org" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="suc_org" required>
+                                            <label class="animated-label" for="suc_org">Origen</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_datebg" class="scse-form-group pt-2" data-control="" data-code="suc_datebg" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="suc_datebg" required>
+                                            <label class="animated-label" for="suc_datebg">Fecha de diagnóstico</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div id="su_age" class="scse-form-group pt-2" data-control="" data-code="suc_age" data-type="TB">
+                                            <input class="scse-form-control" type="text" id="suc_age" required>
+                                            <label class="animated-label" for="suc_age">Edad</label>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="su_Observations" data-control="" data-code="suc_Observations" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label">Observaciones</label>
+                                        <div class="containerTextarea" style="min-height: 50px;">
+                                            <textarea rows="1" class="form-control" id="suc_Observations" name="suc_Observations" data-required="true"></textarea>
                                             <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
                                         </div>
                                     </div>
                                 </div>
-                                <button class="plus-bottom float-right" type="button">
-                                    <i class="fa fa-close" aria-hidden="true"></i>
-                                </button>
                             </div>
+                            <hr class="striped-border">
+                        </div>
+                        <div class="row m-1 hidden  animated fadeIn fast" data-clone="">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-8 pl-4">
+                                        <div data-control-clone="" data-code="tagify" data-type="TF">
+                                            <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="code" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="code" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="org" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="org" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="datebg" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="datebg" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="age" data-type="TB">
+                                            <input class="scse-form-control" type="text" data-idcontrol="age" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div data-control-clone="" data-code="Observations" data-type="TA" class="ExpandableTextArea position-relative" data-expandedclass="col-12" data-defaultclass="col-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label">Observaciones</label>
+                                        <div class="containerTextarea" style="min-height: 50px;">
+                                            <textarea rows="1" class="form-control" data-idcontrol="Observations" name="suc_Observations" data-required="true"></textarea>
+                                            <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
+                                        </div>
+                                        <button class="plus-bottom stiky float-right" type="button">
+                                                <i class="fa fa-close" aria-hidden="true"></i>
+                                            </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="striped-border">
                         </div>
                     </div>
                 </div>
+                <!-- fin quirurgicos -->
             </div>
         </div>
     </div>

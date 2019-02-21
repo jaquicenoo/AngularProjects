@@ -1,4 +1,5 @@
 $gray:#c2c1c7;
+$orange:#ea8807;
 .bg-tagify {
     margin: 1em .5em;
     border: none;
@@ -35,12 +36,21 @@ $gray:#c2c1c7;
     .scse-form-group .scse-form-control:valid:not(.select)~.animated-label {
         top: -4px;
     }
+    .plus-bottom.stiky {
+        position: absolute;
+        right: -4em;
+        bottom: 0;
+        color: $orange;
+        border-color: $orange;
+        &:hover {
+            background-color: $orange;
+            color: white;
+        }
+    }
 }
 
 .striped-border {
     border: 1px dashed $gray;
     width: 95%;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 1em auto;
 }
