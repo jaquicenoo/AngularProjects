@@ -284,57 +284,75 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-1 hidden animated fadeIn fast" data-expand="">
-                            <div class="col-md-9">
-                                <div class="row">
-                                    <div class="col-md-8 pl-4">
-                                        <div id="su_tagify" data-control="" data-code="suc_tagify" data-type="TF">
-                                            <input class="bg-tagify" type="text" name="suc_tagify" value="" />
-                                        </div>
+                        <div class="col-md-12 animated fadeIn fast" data-expand="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="su_proc" class="scse-form-group pt-2" data-control="" data-code="suc_proc" data-type="TB">
+                                        <select class="scse-form-control scse-select select" id="suc_proc">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label" for="@var.Code">Procedimiento</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div id="su_code" class="scse-form-group pt-2" data-control="" data-code="suc_code" data-type="TB">
-                                            <input class="scse-form-control" type="text" id="suc_code" required>
-                                            <label class="animated-label" for="suc_code">Código</label>
-                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                                        </div>
+                                </div>
+                                <div class="col-md-6 pl-4">
+                                    <div id="su_tagify" data-control="" data-code="suc_tagify" data-type="TF">
+                                        <input class="bg-tagify" type="text" name="suc_tagify" value="" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <div id="su_org" class="scse-form-group pt-2" data-control="" data-code="suc_org" data-type="TB">
-                                            <input class="scse-form-control" type="text" id="suc_org" required>
-                                            <label class="animated-label" for="suc_org">Origen</label>
-                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                                        </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div id="su_prop" class="scse-form-group pt-2" data-control="" data-code="suc_prop" data-type="TB">
+                                        <select class="scse-form-control scse-select select" id="suc_prop">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label" for="@var.Code">Propósito</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div id="su_datebg" class="scse-form-group pt-2" data-control="" data-code="suc_datebg" data-type="TB">
-                                            <input class="scse-form-control" type="text" id="suc_datebg" required>
-                                            <label class="animated-label" for="suc_datebg">Fecha de diagnóstico</label>
-                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                                        </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div id="su_fecha" class="scse-form-group pt-2" data-control="" data-code="suc_fecha" data-type="TB">
+                                        <input class="scse-form-control" type="text" id="suc_fecha" required>
+                                        <label class="animated-label" for="suc_fecha">Fecha</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div id="su_age" class="scse-form-group pt-2" data-control="" data-code="suc_age" data-type="TB">
-                                            <input class="scse-form-control" type="text" id="suc_age" required>
-                                            <label class="animated-label" for="suc_age">Edad</label>
-                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                                <div class="col-md-6 pl-4">
+                                    <div id="su_ips" data-control="" data-code="suc_ips" data-type="TF">
+                                        <input class="bg-tagify" type="text" name="suc_ips" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="su_motivo" data-control="" data-code="suc_motivo" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                        <div class="form-group row p-3">
+                                            <label class="col-2 p-0 col-form-label">Motivo</label>
+                                            <div class="col-10 p-0 containerTextarea" style="min-height: 50px;">
+                                                <textarea rows="1" class="form-control" id="suc_motivo" name="suc_motivo" data-required="true"></textarea>
+                                                <img class="ExpandableContainerToggle " src="./images/FlechaB.png">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div id="su_Observations" data-control="" data-code="suc_Observations" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
-                                    <div class="form-group">
-                                        <label class="col-form-label">Observaciones</label>
-                                        <div class="containerTextarea" style="min-height: 50px;">
-                                            <textarea rows="1" class="form-control" id="suc_Observations" name="suc_Observations" data-required="true"></textarea>
-                                            <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
-                                        </div>
+                                <div class="col-md-3">
+                                    <div id="su_ubic" class="scse-form-group pt-2" data-control="" data-code="suc_ubic" data-type="TB">
+                                        <select class="scse-form-control scse-select select" id="suc_ubic">                                    
+                                                    <option value="value1"></option>
+                                                </select>
+                                        <label class="animated-label" for="@var.Code">Ubicación</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="scse-form-group">
+                                        <span class="switch switch-sm">
+                                            <label for="haveTriedToQuitAlcohol">Reconstructiva</label>
+                                            <input id="haveTriedToQuitAlcohol" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="divDoTreatmentForAlcohol" />
+                                            <label for="haveTriedToQuitAlcohol"></label>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <hr class="striped-border">
                         </div>
+                        <hr class="striped-border">
                         <div class="row m-1 hidden  animated fadeIn fast" data-clone="">
                             <div class="col-md-9">
                                 <div class="row">
