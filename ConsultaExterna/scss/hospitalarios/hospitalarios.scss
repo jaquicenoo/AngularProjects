@@ -32,9 +32,20 @@ $orange:#ea8807;
         top: 10px;
     }
     .scse-form-group .scse-form-control.active~.animated-label,
-    .scse-form-group .scse-form-control:focus:not(.select)~.animated-label,
-    .scse-form-group .scse-form-control:valid:not(.select)~.animated-label {
+    .scse-form-group .scse-form-control:focus:not(.select)~.animated-label {
         top: -4px;
+    }
+    .scse-form-group {
+        input[type=date]~.animated-label {
+            top: -4px;
+            opacity: 1;
+            width: fit-content;
+            color: #979494;
+            font-size: 12px;
+        }
+        input[type=number]~.animated-label {
+            width: fit-content;
+        }
     }
     .plus-bottom.stiky {
         position: absolute;

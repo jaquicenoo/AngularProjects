@@ -30,9 +30,18 @@
   top: 10px;
 }
 .bg-data-container .scse-form-group .scse-form-control.active ~ .animated-label,
-.bg-data-container .scse-form-group .scse-form-control:focus:not(.select) ~ .animated-label,
-.bg-data-container .scse-form-group .scse-form-control:valid:not(.select) ~ .animated-label {
+.bg-data-container .scse-form-group .scse-form-control:focus:not(.select) ~ .animated-label {
   top: -4px;
+}
+.bg-data-container .scse-form-group input[type=date] ~ .animated-label {
+  top: -4px;
+  opacity: 1;
+  width: fit-content;
+  color: #979494;
+  font-size: 12px;
+}
+.bg-data-container .scse-form-group input[type=number] ~ .animated-label {
+  width: fit-content;
 }
 .bg-data-container .plus-bottom.stiky {
   position: absolute;

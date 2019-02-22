@@ -33,7 +33,7 @@ Background.prototype.init = function() {
     // creación de cada control
     this.control.querySelectorAll('[data-control]').forEach(function(control) {
         let data = control.dataset;
-        this.controls.push(new BackgroundControl(control.id, data.type, data.code, this.code));
+        this.controls.push(this.createControlByType(control.id, data.type, data.code, this.code));
     }, this);
 
 };
@@ -73,6 +73,26 @@ Background.prototype.showAlert = function(error) {
         this.control.style.setProperty("--main-alarm-color", `RGB(${alarm.ColorAlert})`);
         this.control.classList.add('show-alert');
 
+    }
+};
+
+// instancia un control deacuerdo al tipo 
+Background.prototype.createControlByType = function(id, type, code, parentCode) {
+    switch (type) {
+        case 'TB':
+            return new BackgroundControlTextBox(id, type, code, parentCode);
+        case 'TF':
+            return new BackgroundControlTagify(id, type, code, parentCode);
+        case 'CG':
+            return new BackgroundControlGroupBox(id, type, code, parentCode);
+        case 'TA':
+            return new BackgroundControlTextArea(id, type, code, parentCode);
+        case 'SE':
+            return new BackgroundControlSelect(id, type, code, parentCode);
+        case 'SW':
+            return new BackgroundControlSwitch(id, type, code, parentCode);
+        default:
+            return new BackgroundControl(id, type, code, parentCode);
     }
 };
 

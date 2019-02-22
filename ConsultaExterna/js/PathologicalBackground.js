@@ -51,14 +51,10 @@ PathologicalBackground.prototype.addDiagnostic = function() {
         // deja de ser un clone
         delete variable.dataset.controlClone;
         variable.dataset.control = "";
-        var input = variable.querySelector('[data-idcontrol="' + controlid + '"]');
         variable.id = 'pa_' + controlid + this.count;
         variable.dataset.code = 'pac_' + controlid + this.count;
-        input.id = 'pac_' + controlid + this.count;
-        input.name = 'pac_' + controlid + this.count;
-        delete input.dataset.idcontrol;
         // seteo de valores y limpia las variables
-        var backControl = new BackgroundControl(variable.id, variable.dataset.type, variable.dataset.code, this.code);
+        var backControl = this.createControlByType(variable.id, variable.dataset.type, variable.dataset.code, this.code);
         var varToSet = this.controls.find(v => v.id === 'pa_' + controlid);
         // el bacground control se encargadel set de cada control
         backControl.Value = varToSet.Value;
@@ -71,9 +67,9 @@ PathologicalBackground.prototype.addDiagnostic = function() {
 PathologicalBackground.prototype.removeDiagnostic = function(e) {
     var parent = e.target.closest('[data-clone]');
     parent.querySelectorAll('[data-control]').forEach(function(control) {
-        var control = this.controls.find(v => v.code === control.dataset.code);
-        if (control) {
-            var index = this.controls.indexOf(control);
+        var variable = this.controls.find(v => v.code === control.dataset.code);
+        if (variable) {
+            var index = this.controls.indexOf(variable);
             delete this.controls[index];
             this.controls.splice(index, 1);
         }
