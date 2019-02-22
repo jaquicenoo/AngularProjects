@@ -23,6 +23,8 @@ BackgroundsComponent.prototype.init = function() {
     this.control.querySelectorAll('[data-background]').forEach(function(back) {
         if (back.id === "bgpathological") {
             this.Backgrounds.push(new PathologicalBackground(back.id));
+        } else if (back.id === 'bgsurgical') {
+            this.Backgrounds.push(new SurgicalBackground(back.id));
         } else {
             this.Backgrounds.push(new Background(back.id));
         }

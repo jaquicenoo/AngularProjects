@@ -36,10 +36,12 @@
     margin-bottom: 16px;
 }
 
+.bg-tagify+.animated-label,
 .scse-form-group select+.animated-label {
     width: fit-content;
 }
 
+.bg-tagify+.animated-label,
 .scse-form-group .animated-label {
     position: absolute;
     top: 20px;
@@ -57,6 +59,18 @@
     user-select: none;
 }
 
+.bg-tagify+.animated-label {
+    width: fit-content;
+    left: 2.8em;
+    top: 19%;
+    z-index: -1;
+}
+
+.tagify.tagify--focus~.animated-label {
+    visibility: hidden;
+}
+
+.bg-tagify+.animated-label::after,
 .scse-form-group .animated-label:after {
     content: "";
     position: absolute;

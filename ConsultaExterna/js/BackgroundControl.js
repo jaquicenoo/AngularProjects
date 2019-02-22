@@ -64,6 +64,9 @@ BackgroundControl.prototype.getValueBytype = function() {
         case 'TA':
             this._value = this.control.querySelector('textarea').value;
             break;
+        case 'SE':
+            this._value = this.control.querySelector('select').value;
+            break;
         default:
     }
     return this._value;
@@ -87,6 +90,9 @@ BackgroundControl.prototype.setValueBytype = function(value) {
             break;
         case 'TA':
             this.control.querySelector('textarea').value = value;
+            break;
+        case 'SE':
+            this.control.querySelector('select').value = value;
             break;
         default:
     }

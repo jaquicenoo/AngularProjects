@@ -284,10 +284,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 animated fadeIn fast" data-expand="">
+                        <div class="col-md-12 hidden animated fadeIn fast" data-expand="">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div id="su_proc" class="scse-form-group pt-2" data-control="" data-code="suc_proc" data-type="TB">
+                                    <div id="su_proc" class="scse-form-group pt-2" data-control="" data-code="suc_proc" data-type="SE">
                                         <select class="scse-form-control scse-select select" id="suc_proc">                                    
                                             <option value="value1"></option>
                                         </select>
@@ -298,10 +298,11 @@
                                 <div class="col-md-6 pl-4">
                                     <div id="su_tagify" data-control="" data-code="suc_tagify" data-type="TF">
                                         <input class="bg-tagify" type="text" name="suc_tagify" value="" />
+                                        <label class="animated-label" for="pac_code">Diagnostico</label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div id="su_prop" class="scse-form-group pt-2" data-control="" data-code="suc_prop" data-type="TB">
+                                    <div id="su_prop" class="scse-form-group pt-2" data-control="" data-code="suc_prop" data-type="SE">
                                         <select class="scse-form-control scse-select select" id="suc_prop">                                    
                                                 <option value="value1"></option>
                                             </select>
@@ -319,6 +320,7 @@
                                 <div class="col-md-6 pl-4">
                                     <div id="su_ips" data-control="" data-code="suc_ips" data-type="TF">
                                         <input class="bg-tagify" type="text" name="suc_ips" value="" />
+                                        <label class="animated-label" for="pac_code">Ips</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -333,7 +335,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div id="su_ubic" class="scse-form-group pt-2" data-control="" data-code="suc_ubic" data-type="TB">
+                                    <div id="su_ubic" class="scse-form-group pt-2" data-control="" data-code="suc_ubic" data-type="SE">
                                         <select class="scse-form-control scse-select select" id="suc_ubic">                                    
                                                     <option value="value1"></option>
                                                 </select>
@@ -342,62 +344,79 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="scse-form-group">
+                                    <div id="su_reco" class="scse-form-group" data-control="" data-code="suc_reco" data-type="SW">
                                         <span class="switch switch-sm">
-                                            <label for="haveTriedToQuitAlcohol">Reconstructiva</label>
-                                            <input id="haveTriedToQuitAlcohol" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="divDoTreatmentForAlcohol" />
-                                            <label for="haveTriedToQuitAlcohol"></label>
+                                            <label for="suc_reco">Reconstructiva</label>
+                                            <input id="suc_reco" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="divDoTreatmentForAlcohol" />
+                                            <label for="suc_reco"></label>
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="striped-border">
-                        <div class="row m-1 hidden  animated fadeIn fast" data-clone="">
-                            <div class="col-md-9">
-                                <div class="row">
-                                    <div class="col-md-8 pl-4">
-                                        <div data-control-clone="" data-code="tagify" data-type="TF">
-                                            <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
-                                        </div>
+                        <div class="col-md-12 hidden animated fadeIn fast" data-clone="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="scse-form-group pt-2" data-control-clone="" data-code="proc" data-type="SE">
+                                        <select class="scse-form-control scse-select select" data-idcontrol="proc">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="code" data-type="TB">
-                                            <input class="scse-form-control" type="text" data-idcontrol="code" required>
-                                        </div>
+                                </div>
+                                <div class="col-md-6 pl-4">
+                                    <div data-control-clone="" data-code="tagify" data-type="TF">
+                                        <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="org" data-type="TB">
-                                            <input class="scse-form-control" type="text" data-idcontrol="org" required>
-                                        </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="scse-form-group pt-2" data-control-clone="" data-code="prop" data-type="SE">
+                                        <select class="scse-form-control scse-select select" data-idcontrol="prop">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="datebg" data-type="TB">
-                                            <input class="scse-form-control" type="text" data-idcontrol="datebg" required>
-                                        </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="scse-form-group pt-2" data-control-clone="" data-code="fecha" data-type="TB">
+                                        <input class="scse-form-control" type="text" data-idcontrol="fecha" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="scse-form-group pt-2" data-control-clone="" data-code="age" data-type="TB">
-                                            <input class="scse-form-control" type="text" data-idcontrol="age" required>
+                                </div>
+                                <div class="col-md-6 pl-4">
+                                    <div data-control-clone="" data-code="ips" data-type="TF">
+                                        <input class="bg-tagify" type="text" data-idcontrol="ips" name="ips" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div data-control-clone="" data-code="motivo" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
+                                        <div class="form-group row p-3">
+                                            <label class="col-2 p-0 col-form-label">Motivo</label>
+                                            <div class="col-10 p-0 containerTextarea" style="min-height: 50px;">
+                                                <textarea rows="1" class="form-control" data-idcontrol="motivo" name="motivo" data-required="true"></textarea>
+                                                <img class="ExpandableContainerToggle " src="./images/FlechaB.png">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div data-control-clone="" data-code="Observations" data-type="TA" class="ExpandableTextArea position-relative" data-expandedclass="col-12" data-defaultclass="col-6">
-                                    <div class="form-group">
-                                        <label class="col-form-label">Observaciones</label>
-                                        <div class="containerTextarea" style="min-height: 50px;">
-                                            <textarea rows="1" class="form-control" data-idcontrol="Observations" name="suc_Observations" data-required="true"></textarea>
-                                            <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
-                                        </div>
-                                        <button class="plus-bottom stiky float-right" type="button">
-                                                <i class="fa fa-close" aria-hidden="true"></i>
-                                            </button>
+                                <div class="col-md-3">
+                                    <div class="scse-form-group pt-2" data-control-clone="" data-code="ubic" data-type="SE">
+                                        <select class="scse-form-control scse-select select" data-idcontrol="ubic">                                    
+                                                    <option value="value1"></option>
+                                                </select>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div data-control-clone="" class="scse-form-group" data-code="reco" data-type="SW">
+                                        <span class="switch switch-sm">
+                                            <input data-idcontrol="reco" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="divDoTreatmentForAlcohol" />
+                                            <label for="reco"></label>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                            <hr class="striped-border">
                         </div>
                     </div>
                 </div>
@@ -429,6 +448,7 @@
     <script src="./js/BackgroundComponent.js" type="text/javascript"></script>
     <script src="./js/ToxicHabitsBackground.js" type="text/javascript"></script>
     <script src="./js/PathologicalBackground.js" type="text/javascript"></script>
+    <script src="./js/SurgicalBackground.js" type="text/javascript"></script>
     <!-- scripting  -->
     <script>
         $(document).ready(function() {
