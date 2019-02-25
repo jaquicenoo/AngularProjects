@@ -27,14 +27,14 @@
 }
 
 .bg-data-container .scse-form-group .animated-label {
-  top: 10px;
+  top: 15px;
 }
 .bg-data-container .scse-form-group .scse-form-control.active ~ .animated-label,
 .bg-data-container .scse-form-group .scse-form-control:focus:not(.select) ~ .animated-label {
-  top: -4px;
+  top: 0px;
 }
 .bg-data-container .scse-form-group input[type=date] ~ .animated-label {
-  top: -4px;
+  top: 0px;
   opacity: 1;
   width: 83%;
   color: #979494;
@@ -64,10 +64,96 @@
   color: white;
 }
 
+.bp-grid-item {
+  display: flex;
+  width: 98%;
+  background-color: #dee2e6;
+  border-radius: 3px;
+  margin: 0.1em;
+  align-items: center;
+}
+.bp-grid-item:hover {
+  cursor: pointer;
+  background-color: #93b74b;
+  color: #dee2e6;
+}
+
+.bp-tablexam {
+  display: grid;
+  grid-template-columns: 2.5em repeat(4, 1fr);
+  grid-template-rows: repeat(8, 2.5em);
+}
+.bp-tablexam .header {
+  display: grid;
+  grid-column: 2/6;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+.bp-tablexam .header .bp-grid-item {
+  justify-content: center;
+}
+.bp-tablexam .group-var {
+  display: grid;
+  grid-column: 1/3;
+  grid-row: 2/9;
+  grid-template-columns: 2.5em 1fr;
+  grid-template-rows: repeat(7, 2.5em);
+}
+.bp-tablexam .group-var .bp-grid-item {
+  padding-left: 1em;
+}
+.bp-tablexam .group-var .grouper {
+  display: flex;
+  padding-left: 0;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  line-height: 12px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.bp-tablexam .group-var .grouper.hbg {
+  grid-row: 1/3;
+}
+.bp-tablexam .group-var .grouper.oe {
+  grid-row: 3/6;
+}
+.bp-tablexam .group-data {
+  display: grid;
+  grid-column: 3/6;
+  grid-row: 2/9;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  font-size: 11px;
+}
+.bp-tablexam .group-data label {
+  padding-left: 1.5em;
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.bp-tablexam .group-data .scse-form-group {
+  margin: 0.5px 0 0 0;
+  padding: 0;
+}
+.bp-tablexam .group-data .scse-form-group select,
+.bp-tablexam .group-data .scse-form-group input {
+  padding: 0;
+  text-align: center;
+}
+.bp-tablexam .group-data .scse-form-group select::-webkit-input-placeholder,
+.bp-tablexam .group-data .scse-form-group input::-webkit-input-placeholder {
+  text-align: center;
+  color: #dee2e6;
+}
+
 .striped-border {
   border: 1px dashed #c2c1c7;
   width: 95%;
   margin: 1em auto;
+}
+
+.right-dotted {
+  border-right: 1px dashed #c2c1c7;
 }
 
 /*# sourceMappingURL=hospitalarios.css.map */

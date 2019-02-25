@@ -1,5 +1,8 @@
 $gray:#c2c1c7;
+$darkgray:#c1c1c1;
+$ligthgray:#dee2e6;
 $orange:#ea8807;
+$green:#93b74b;
 .bg-tagify {
     margin: 1em .5em;
     border: none;
@@ -29,16 +32,16 @@ $orange:#ea8807;
 
 .bg-data-container {
     .scse-form-group .animated-label {
-        top: 10px;
+        top: 15px;
     }
     .scse-form-group .scse-form-control.active~.animated-label,
     .scse-form-group .scse-form-control:focus:not(.select)~.animated-label {
-        top: -4px;
+        top: 0px;
     }
     .scse-form-group {
         input[type=date] {
             &~.animated-label {
-                top: -4px;
+                top: 0px;
                 opacity: 1;
                 width: 83%;
                 color: #979494;
@@ -74,8 +77,93 @@ $orange:#ea8807;
     }
 }
 
+.bp-grid-item {
+    display: flex;
+    width: 98%;
+    background-color: $ligthgray;
+    border-radius: 3px;
+    margin: 0.1em;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        background-color: $green;
+        color: $ligthgray;
+    }
+}
+
+.bp-tablexam {
+    display: grid;
+    grid-template-columns: 2.5em repeat(4, 1fr);
+    grid-template-rows: repeat(8, 2.5em);
+    .header {
+        display: grid;
+        grid-column: 2/6;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        .bp-grid-item {
+            justify-content: center;
+        }
+    }
+    .group-var {
+        display: grid;
+        grid-column: 1/3;
+        grid-row: 2/9;
+        grid-template-columns: 2.5em 1fr;
+        grid-template-rows: repeat(7, 2.5em);
+        .bp-grid-item {
+            padding-left: 1em;
+        }
+        .grouper {
+            display: flex;
+            padding-left: 0;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+            line-height: 12px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            &.hbg {
+                grid-row: 1/3;
+            }
+            &.oe {
+                grid-row: 3/6;
+            }
+        }
+    }
+    .group-data {
+        display: grid;
+        grid-column: 3/6;
+        grid-row: 2/9;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+        font-size: 11px;
+        label {
+            padding-left: 1.5em;
+            margin: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        }
+        .scse-form-group {
+            margin: .5px 0 0 0;
+            padding: 0;
+            select,
+            input {
+                padding: 0;
+                text-align: center;
+                &::-webkit-input-placeholder {
+                    text-align: center;
+                    color: $ligthgray;
+                }
+            }
+        }
+    }
+}
+
 .striped-border {
     border: 1px dashed $gray;
     width: 95%;
     margin: 1em auto;
+}
+
+.right-dotted {
+    border-right: 1px dashed #c2c1c7;
 }

@@ -25,6 +25,8 @@ BackgroundsComponent.prototype.init = function() {
             this.Backgrounds.push(new PathologicalBackground(back.id));
         } else if (back.id === 'bgsurgical') {
             this.Backgrounds.push(new SurgicalBackground(back.id));
+        } else if (back.id === 'bgmatern') {
+            this.Backgrounds.push(new BasePregnancyBackground(back.id));
         } else {
             this.Backgrounds.push(new Background(back.id));
         }

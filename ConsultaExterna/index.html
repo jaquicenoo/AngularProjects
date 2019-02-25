@@ -442,28 +442,28 @@
                     <label class="bg-title">Embarazo actual y examenes realizados</label>
                     <div class="row mx-1">
                         <div class="col-md-3">
-                            <div id="pre_plan" class="scse-form-group" data-control="" data-code="prec_plan" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label for="prec_plan">Embarazo planeado</label>
-                                    <input id="prec_plan" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_plan" />
-                                    <label for="prec_plan"></label>
+                            <div id="pre_plan" class="scse-form-group pt-3" data-control="" data-code="plan" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Embarazo planeado</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_plan" />
+                                    <label ></label>
                                 </span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_des" class="scse-form-group" data-control="" data-code="prec_des" data-type="SW">
-                                <span class="switch switch-sm">
-                                        <label for="prec_des">Embarazo Deseado</label>
-                                        <input id="prec_des" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_des" />
-                                        <label for="prec_des"></label>
+                            <div id="pre_des" class="scse-form-group pt-3" data-control="" data-code="des" data-type="SW">
+                                <span class="switch switch-sm row">
+                                        <label class="col-9">Embarazo Deseado</label>
+                                        <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_des" />
+                                        <label></label>
                                     </span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_ace" class="scse-form-group" data-control="" data-code="prec_ace" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label for="prec_ace">Embarazo Aceptado</label>
-                                    <input id="prec_ace" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_ace" />
+                            <div id="pre_ace" class="scse-form-group pt-3" data-control="" data-code="ace" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Embarazo Aceptado</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_ace" />
                                     <label for="prec_ace"></label>
                                 </span>
                             </div>
@@ -478,56 +478,62 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_cpc" class="scse-form-group" data-control="" data-code="prec_cpc" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label class="w-50" for="prec_cpc">Consulta preconcepcional</label>
-                                    <input id="prec_cpc" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_cpc" />
-                                    <label for="prec_cpc"></label>
+                            <div id="pre_cpc" class="scse-form-group pt-0" data-control="" data-code="cpc" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9" class="w-50">Consulta preconcepcional</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_cpc" />
+                                    <label ></label>
                                 </span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pra_pa" class="scse-form-group pt-2" data-control="" data-code="pa" data-type="TB">
-                                <input class="scse-form-control" type="tex" required>
+                            <div id="prr_pa" class="scse-form-group pt-2" data-control="" data-code="pa" data-type="TB">
+                                <input class="scse-form-control" type="text" required>
                                 <label class="animated-label">Peso anterior</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_mfd" class="scse-form-group pt-2" data-control="" data-code="mfd" data-type="SE">
-                                <select class="scse-form-control scse-select select">                                    
-                                        <option value="value1"></option>
-                                    </select>
+                            <div id="pre_mfd" class="scse-form-group pt-2" data-control="" data-code="mfd" data-type="TB">
+                                <input class="scse-form-control" type="date">
                                 <label class="animated-label">Movimientos fetales desde</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_hde" class="scse-form-group pt-2" data-control="" data-code="hde" data-type="SE">
-                                <select class="scse-form-control scse-select select">                                    
-                                            <option value="value1"></option>
-                                        </select>
-                                <label class="animated-label">Hospitalizada durante embarazo</label>
-                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            <div id="pre_hde" class="scse-form-group pt-2" data-control="" data-code="hde" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9" class="w-50">Hospitalizada durante embarazo</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-activate="pre_dig" />
+                                    <label ></label>
+                                </span>
                             </div>
                         </div>
-                        <div class="col-md-6 pl-4">
-                            <div id="pra_dig" data-control="" data-code="prac_dig" data-type="TF">
+                        <div class="col-md-6 pl-4 hidden">
+                            <div id="pre_dig" data-control="" data-code="prac_dig" data-type="TF">
                                 <input class="bg-tagify" type="text" name="prac_dig" value="" />
                                 <label class="animated-label" for="prac_dig">Diagnostico</label>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pra_exm" class="scse-form-group pt-2" data-control="" data-code="exm" data-type="TB">
-                                <input class="scse-form-control" type="tex" required>
-                                <label class="animated-label">Examen medico</label>
+                            <div id="pre_exm" class="scse-form-group pt-2" data-control="" data-code="exm" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
+                                </select>
+                                <label class="animated-label">Examen odontológico</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div id="pre_exmm" class="scse-form-group pt-2" data-control="" data-code="exmm" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                    <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Examen mamas</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -536,36 +542,86 @@
                         <div class="col-md-3">
                             <div id="pre_atr" class="scse-form-group pt-2" data-control="" data-code="atr" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                        <option value="value1"></option>
-                                    </select>
+                                    <option value="v1"></option>
+                                    <option value="vn">no</option>
+                                    <option value="vns">no se sabe</option>
+                                    <option value="vp">previa</option>
+                                    <option value="vem">embarazo</option>
+                                    <option value="vnsh">no se hizo</option>
+                                </select>
                                 <label class="animated-label">antirubeola</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_atp" class="scse-form-group" data-control="" data-code="atp" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label for="prec_atp">Antitetanica previa</label>
-                                    <input id="prec_atp" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_atp" />
-                                    <label for="prec_atp"></label>
+                            <div id="pre_atp" class="scse-form-group pt-3" data-control="" data-code="atp" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Antitetanica previa</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-activate="pre_atpmpd" />
+                                    <label></label>
                                 </span>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div id="pre_tof" class="scse-form-group" data-control="" data-code="tof" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label for="prec_tof">Tos ferina</label>
-                                    <input id="prec_tof" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_tof" />
-                                    <label for="prec_tof"></label>
-                                </span>
+                        <div class="col-md-3 hidden">
+                            <div id="pre_atpmpd" class="scse-form-group pt-2" data-control="" data-code="atpmpd" data-type="SE">
+                                <select class="scse-form-control scse-select select" data-activate="pre_atpmsd">                                    
+                                        <option value="v1"></option>
+                                        <option value="v2">1</option>
+                                        <option value="v3">2</option>
+                                        <option value="v4">3</option>
+                                        <option value="v5">4</option>
+                                        <option value="v6">5</option>
+                                        <option value="v6">6</option>
+                                        <option value="v6">7</option>
+                                        <option value="v6">8</option>
+                                        <option value="v6">9</option>
+                                    </select>
+                                <label class="animated-label">Mes primera dosis</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 hidden">
+                            <div id="pre_atpmsd" class="scse-form-group pt-2" data-control="" data-code="atpmsd" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                            <option value="v1"></option>
+                                            <option value="v2">1</option>
+                                            <option value="v3">2</option>
+                                            <option value="v4">3</option>
+                                            <option value="v5">4</option>
+                                            <option value="v6">5</option>
+                                            <option value="v6">6</option>
+                                            <option value="v6">7</option>
+                                            <option value="v6">8</option>
+                                            <option value="v6">9</option>
+                                        </select>
+                                <label class="animated-label">Mes segunda dosis</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_idrh" class="scse-form-group" data-control="" data-code="idrh" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label for="prec_idrh">Inmunización de rh</label>
-                                    <input id="prec_idrh" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_idrh" />
-                                    <label for="prec_idrh"></label>
+                            <div id="pre_tof" class="scse-form-group pt-3" data-control="" data-code="tof" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Tos ferina</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-activate="pre_rgmg" />
+                                    <label ></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 hidden">
+                            <div id="pre_rgmg" class="scse-form-group pt-3" data-control="" data-code="rgmg" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Recibio gamaglobulina </label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_tof" />
+                                    <label ></label>
+                                 </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_idrh" class="scse-form-group pt-3" data-control="" data-code="idrh" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Inmunización de rh</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_idrh" />
+                                    <label ></label>
                                 </span>
                             </div>
                         </div>
@@ -581,7 +637,10 @@
                         <div class="col-md-3">
                             <div id="pre_civ" class="scse-form-group pt-2" data-control="" data-code="civ" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                        <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Cervix: Inspección visual</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -590,7 +649,10 @@
                         <div class="col-md-3">
                             <div id="pre_tpv" class="scse-form-group pt-2" data-control="" data-code="tpv" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                        <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Tamizaje para VPH</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -599,7 +661,10 @@
                         <div class="col-md-3">
                             <div id="pre_pap" class="scse-form-group pt-2" data-control="" data-code="pap" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                        <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Papanicolaou</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -608,7 +673,10 @@
                         <div class="col-md-3">
                             <div id="pre_col" class="scse-form-group pt-2" data-control="" data-code="col" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                    <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vn">normal</option>
+                                    <option value="va">anormal</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Colposcopia</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -617,7 +685,10 @@
                         <div class="col-md-3">
                             <div id="pre_cha" class="scse-form-group pt-2" data-control="" data-code="cha" data-type="SE">
                                 <select class="scse-form-control scse-select select">                                    
-                                    <option value="value1"></option>
+                                    <option value="v1"></option>
+                                    <option value="vp">Positivo</option>
+                                    <option value="vn">Negativo</option>
+                                    <option value="vnsh">no se hizo</option>
                                 </select>
                                 <label class="animated-label">Chagas</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -642,11 +713,11 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div id="pre_eop" class="scse-form-group" data-control="" data-code="prec_eop" data-type="SW">
-                                <span class="switch switch-sm">
-                                    <label class="w-50" for="prec_eop">Eclampsia o preeclampsia</label>
-                                    <input id="prec_eop" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_eop" />
-                                    <label for="prec_eop"></label>
+                            <div id="pre_eop" class="scse-form-group pt-0" data-control="" data-code="eop" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9" class="w-50">Eclampsia o preeclampsia</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_eop" />
+                                    <label></label>
                                 </span>
                             </div>
                         </div>
@@ -657,6 +728,511 @@
                                 </select>
                                 <label class="animated-label">Consejeria lactancia materna</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="bp-tablexam h-25">
+                                <div class="">
+                                </div>
+                                <div class="header">
+                                    <div class="bp-grid-item">EXÁMENES</div>
+                                    <div class="bp-grid-item">SEMANAS</div>
+                                    <div class="bp-grid-item">VALOR</div>
+                                    <div class="bp-grid-item">FECHA</div>
+                                </div>
+                                <div class="group-var">
+                                    <div class="bp-grid-item grouper hbg">HB y Glucemia</div>
+                                    <div class="bp-grid-item"> HB (g/dl)</div>
+                                    <div class="bp-grid-item">Glucemia (mg/dl)</div>
+                                    <div class="bp-grid-item grouper oe">Otros Examenes</div>
+                                    <div class="bp-grid-item">Urocultivo</div>
+                                    <div class="bp-grid-item">Flujo vaginal</div>
+                                    <div class="bp-grid-item">AgSHB</div>
+                                    <div class="bp-grid-item grouper si">Sifilis</div>
+                                    <div class="bp-grid-item">VDRL/RPR</div>
+                                    <div class="bp-grid-item grouper T">T</div>
+                                    <div class="bp-grid-item">Toxoplasmosis</div>
+                                </div>
+                                <div class="group-data">
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_lthbt" class="scse-form-group" data-control="" data-code="lthbt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_lthbd" class="scse-form-group" data-control="" data-code="lthbd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mthbt" class="scse-form-group" data-control="" data-code="mthbt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mthbd" class="scse-form-group" data-control="" data-code="mthbd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_ltglt" class="scse-form-group" data-control="" data-code="ltglt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_ltgld" class="scse-form-group" data-control="" data-code="ltgld" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mtglt" class="scse-form-group" data-control="" data-code="mtglt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mtgld" class="scse-form-group" data-control="" data-code="mtgld" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_lturot" class="scse-form-group" data-control="" data-code="lturot" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_lturod" class="scse-form-group" data-control="" data-code="lturod" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mturot" class="scse-form-group" data-control="" data-code="mturot" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mturod" class="scse-form-group" data-control="" data-code="mturod" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_ltflvt" class="scse-form-group" data-control="" data-code="ltflvt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_ltflvd" class="scse-form-group" data-control="" data-code="ltflvd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mtflvt" class="scse-form-group" data-control="" data-code="mtflvt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mtflvd" class="scse-form-group" data-control="" data-code="mtflvd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_ltagst" class="scse-form-group" data-control="" data-code="ltagst" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_ltagsd" class="scse-form-group" data-control="" data-code="ltagsd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mtagst" class="scse-form-group" data-control="" data-code="mtagst" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mtagsd" class="scse-form-group" data-control="" data-code="mtagsd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_ltvdrt" class="scse-form-group" data-control="" data-code="ltvdrt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_ltvdrd" class="scse-form-group" data-control="" data-code="ltvdrd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mtvdrt" class="scse-form-group" data-control="" data-code="mtvdrt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mtvdrd" class="scse-form-group" data-control="" data-code="mtvdrd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Menor a 20 semanas </label>
+                                    <div id="pre_lttoxt" class="scse-form-group" data-control="" data-code="lttoxt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_lttoxd" class="scse-form-group" data-control="" data-code="lttoxd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <label>Mayor o igual a 20 semanas </label>
+                                    <div id="pre_mttoxt" class="scse-form-group" data-control="" data-code="mttoxt" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" min="0" max="200" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                    <div id="pre_mttoxd" class="scse-form-group" data-control="" data-code="mttoxd" data-type="TB">
+                                        <input class="scse-form-control" placeholder="Valor" type="text" required>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="bg-title w-100">Sifilis</label><br>
+                        <div class="col-md-3">
+                            <div id="pre_cfta" class="scse-form-group" data-control="" data-code="cfta" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Consulta por FTA</label>
+                                    <input class="col-2"type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_cfta" />
+                                    <label></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_fe" class="scse-form-group pt-2" data-control="" data-code="fe" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                    </select>
+                                <label class="animated-label">Fecha</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_tra" class="scse-form-group" data-control="" data-code="tra" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Tratamiento</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_tra" />
+                                    <label></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_trap" class="scse-form-group" data-control="" data-code="trap" data-type="SW">
+                                <span class="switch switch-sm row">
+                                    <label class="col-9">Tratamiento pareja</label>
+                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_trap" />
+                                    <label></label>
+                                </span>
+                            </div>
+                        </div>
+                        <label class="bg-title w-100">VIH</label><br>
+                        <div class="col-md-6 right-dotted mb-3">
+                            <div class="row">
+                                <label class="col-6 pt-3" style="color: black">Menos a 20 semanas</label>
+                                <div class="col-6">
+                                    <div id="pre_ltsol" class="scse-form-group pt-3 m-0" data-control="" data-code="ltsol" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-9">Solicitado</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_sol" />
+                                            <label ></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltaspt" class="scse-form-group pt-3 m-0" data-control="" data-code="ltaspt" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-9">Asesoria pre test</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_aspt" />
+                                            <label></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltasptf" class="scse-form-group pt-2 m-0" data-control="" data-code="ltasptf" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Fecha</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltrea" class="scse-form-group pt-3 m-0" data-control="" data-code="ltrea" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-9">Realizado</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                            <label></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltreaf" class="scse-form-group pt-2 m-0" data-control="" data-code="ltreaf" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Fecha</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltresu" class="scse-form-group pt-2 m-0" data-control="" data-code="ltresu" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Resultado</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_ltcons" class="scse-form-group pt-2 m-0" data-control="" data-code="ltcons" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Consejeria</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="row">
+                                <label class="col-6 pt-3" style="color: black">mayor o igual a 20 semanas</label>
+                                <div class="col-6">
+                                    <div id="pre_metsol" class="scse-form-group pt-3 m-0" data-control="" data-code="metsol" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-9">Solicitado</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_sol" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metaspt" class="scse-form-group pt-3 m-0" data-control="" data-code="metaspt" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-9">Asesoria pre test</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_aspt" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metasptf" class="scse-form-group pt-2 m-0" data-control="" data-code="metasptf" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Fecha</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metrea" class="scse-form-group pt-3 m-0" data-control="" data-code="metrea" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-9">Realizado</label>
+                                                <input class="col-2"type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metreaf" class="scse-form-group pt-2 m-0" data-control="" data-code="metreaf" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Fecha</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metresu" class="scse-form-group pt-2 m-0" data-control="" data-code="metresu" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Resultado</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div id="pre_metcons" class="scse-form-group pt-2 m-0" data-control="" data-code="metcons" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Consejeria</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="bg-title w-100">Habitos y factores de riesgo</label><br>
+                        <div class="col-md-4 right-dotted">
+                            <div class="row">
+                                <label class="col-12 m-0" style="color: black">1do Trimestre</label>
+                                <div class="col-12">
+                                    <div id="pre_perfrm" class="scse-form-group pt-2 m-0" data-control="" data-code="perfrm" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Fuma</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_percad" class="scse-form-group pt-2 m-0" data-control="" data-code="percad" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Cigarrillos al dia</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_percd" class="scse-form-group pt-3 m-0" data-control="" data-code="percd" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-10">Consumo de drogas</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                            <label></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_perdro" class="scse-form-group pt-2 m-0" data-control="" data-code="perdro" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                        <label class="animated-label">Drogas</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_percda" class="scse-form-group pt-3 m-0" data-control="" data-code="percda" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-10">Consumo de alcohol</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                            <label></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_pervdv" class="scse-form-group pt-3 m-0" data-control="" data-code="pervdv" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                            <label class="col-10">Victima de violencia</label>
+                                            <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                            <label></label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 right-dotted">
+                            <div class="row">
+                                <label class="col-12 m-0" style="color: black">2do Trimestre</label>
+                                <div class="col-12">
+                                    <div id="pre_sdofrm" class="scse-form-group pt-2 m-0" data-control="" data-code="sdofrm" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Fuma</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_sdocad" class="scse-form-group pt-2 m-0" data-control="" data-code="sdocad" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                    <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Cigarrillos al dia</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_sdocd" class="scse-form-group pt-3 m-0" data-control="" data-code="sdocd" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Consumo de drogas</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_sdodro" class="scse-form-group pt-2 m-0" data-control="" data-code="sdodro" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Drogas</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_sdocda" class="scse-form-group pt-3 m-0" data-control="" data-code="sdocda" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Consumo de alcohol</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_sdovdv" class="scse-form-group pt-3 m-0" data-control="" data-code="sdovdv" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Victima de violencia</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <label class="col-12 m-0" style="color: black">3er Trimestre</label>
+                                <div class="col-12">
+                                    <div id="pre_tcrfrm" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrfrm" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Fuma</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_tcrcad" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrcad" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                    <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Cigarrillos al dia</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_tcrcd" class="scse-form-group pt-3 m-0" data-control="" data-code="tcrcd" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Consumo de drogas</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_tcrdro" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrdro" data-type="SE">
+                                        <select class="scse-form-control scse-select select">                                    
+                                                <option value="value1"></option>
+                                            </select>
+                                        <label class="animated-label">Drogas</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_tcrcda" class="scse-form-group pt-3 m-0" data-control="" data-code="tcrcda" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Consumo de alcohol</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div id="pre_tcrvdv" class="scse-form-group pt-3 m-0" data-control="" data-code="tcrvdv" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-10">Victima de violencia</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_rea" />
+                                                <label></label>
+                                            </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -690,6 +1266,7 @@
     <script src="./js/ToxicHabitsBackground.js" type="text/javascript"></script>
     <script src="./js/PathologicalBackground.js" type="text/javascript"></script>
     <script src="./js/SurgicalBackground.js" type="text/javascript"></script>
+    <script src="./js/PregnancyBackground.js" type="text/javascript"></script>
     <!-- scripting  -->
     <script>
         $(document).ready(function() {

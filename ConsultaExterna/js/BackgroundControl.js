@@ -19,6 +19,7 @@ BackgroundControl.prototype = {
     },
     set Visible(value) {
         this._visible = value;
+        this.changeVisibility();
     },
     get Valid() {
         return this._valid;
@@ -49,9 +50,9 @@ BackgroundControl.prototype.validate = function() {};
 // setea la visibilidad del control
 BackgroundControl.prototype.changeVisibility = function() {
     if (this.Visible) {
-        this.control.parentElement.classList.remove('hidden');
+        this.parentControl.parentElement.classList.remove('hidden');
     } else {
-        this.control.parentElement.classList.add('hidden');
+        this.parentControl.parentElement.classList.add('hidden');
     }
 };
 
@@ -262,6 +263,12 @@ BackgroundControlSelect.prototype.constructor = BackgroundControlSelect;
 BackgroundControlSelect.prototype.init = function() {
     this.parentControl = document.getElementById(this.idParent).querySelector('#' + this.id);
     this.control = this.parentControl.querySelector('select');
+    this.control.id = this.id + '_C';
+    if (this.parentControl.querySelector('.animated-label')) {
+        this.control.id = this.id + '_C';
+        this.parentControl.querySelector('.animated-label').htmlFor = this.id + '_C';
+    }
+    this.control.onchange = this.validate.bind(this);
 };
 // obtiene el valor desde el dom
 BackgroundControlSelect.prototype.getValue = function() {
@@ -272,7 +279,13 @@ BackgroundControlSelect.prototype.setValue = function(value) {
     this.control.value = value;
 };
 // validacion del valor del campo 
-BackgroundControlSelect.prototype.validate = function() {};
+BackgroundControlSelect.prototype.validate = function() {
+    if (this.Value !== 'v1') {
+        this.control.classList.remove('select');
+    } else {
+        this.control.classList.add('select');
+    }
+};
 /************************************************************************/
 
 /**********************clase para el switch*****************************/
@@ -287,7 +300,12 @@ BackgroundControlSwitch.prototype = Object.create(BackgroundControl.prototype);
 BackgroundControlSwitch.prototype.constructor = BackgroundControlSwitch;
 //inicilizacion
 BackgroundControlSwitch.prototype.init = function() {
-    this.parentControl = document.getElementById(this.idParent).querySelector('#' + this.id);
+    this.parentControl = document.getElementById(this.id);
+    this.control = this.parentControl.querySelector('input');
+    this.control.id = this.id + '_C';
+    this.parentControl.querySelectorAll('label').forEach(function(label) {
+        label.htmlFor = this.id + '_C';
+    }, this);
 };
 // obtiene el valor desde el dom
 BackgroundControlSwitch.prototype.getValue = function() {};
