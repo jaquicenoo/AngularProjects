@@ -184,14 +184,14 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div id="pa_datebg" class="scse-form-group pt-2" data-control="" data-code="pac_datebg" data-type="TB">
-                                            <input class="scse-form-control" type="date" required>
+                                            <input class="scse-form-control" type="date" max="2019-02-25" required>
                                             <label class="animated-label">Fecha de diagnóstico</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div id="pa_age" class="scse-form-group pt-2" data-control="" data-code="pac_age" data-type="TB">
-                                            <input class="scse-form-control" type="number" required>
+                                            <input class="scse-form-control" type="number" min="0" max="200" required>
                                             <label class="animated-label">Edad</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
@@ -217,34 +217,35 @@
                                     <div class="col-md-8 pl-4">
                                         <div data-control-clone="" data-code="tagify" data-type="TF">
                                             <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
+                                            <label class="animated-label" for="pac_code">Diagnostico</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="code" data-type="TB">
                                             <input class="scse-form-control" type="text" data-idcontrol="code" required>
                                             <label class="animated-label">Código</label>
-                                            <span class="scse-alert expand" data-alert="" data-message="please enter number only"><i class="fas fa-times"></i></span>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="org" data-type="TB">
                                             <input class="scse-form-control" type="text" data-idcontrol="org" required>
                                             <label class="animated-label">Origen</label>
-                                            <span class="scse-alert expand" data-alert="" data-message="please enter number only"><i class="fas fa-times"></i></span>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="datebg" data-type="TB">
                                             <input class="scse-form-control" type="date" data-idcontrol="datebg" required>
                                             <label class="animated-label">Fecha de origen</label>
-                                            <span class="scse-alert expand" data-alert="" data-message="please enter number only"><i class="fas fa-times"></i></span>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="age" data-type="TB">
                                             <input class="scse-form-control" type="number" data-idcontrol="age" required>
                                             <label class="animated-label">Edad</label>
-                                            <span class="scse-alert expand" data-alert="" data-message="please enter number only"><i class="fas fa-times"></i></span>
+                                            <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +321,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div id="su_fecha" class="scse-form-group pt-2" data-control="" data-code="suc_fecha" data-type="TB">
-                                        <input class="scse-form-control" type="text" id="suc_fecha" required>
+                                        <input class="scse-form-control" type="date" id="suc_fecha" required>
                                         <label class="animated-label" for="suc_fecha">Fecha</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -362,20 +363,22 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="striped-border">
                         <div class="col-md-12 hidden animated fadeIn fast" data-clone="">
+                            <hr class="striped-border w-100">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="proc" data-type="SE">
                                         <select class="scse-form-control scse-select select" data-idcontrol="proc">                                    
                                             <option value="value1"></option>
                                         </select>
+                                        <label class="animated-label" for="">Procedimiento</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 pl-4">
                                     <div data-control-clone="" data-code="tagify" data-type="TF">
                                         <input class="bg-tagify" type="text" data-idcontrol="tagify" name="tagify" value="" />
+                                        <label class="animated-label" for="">Diagnostico</label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -383,24 +386,28 @@
                                         <select class="scse-form-control scse-select select" data-idcontrol="prop">                                    
                                                 <option value="value1"></option>
                                             </select>
+                                        <label class="animated-label" for="">Proposito</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="fecha" data-type="TB">
-                                        <input class="scse-form-control" type="text" data-idcontrol="fecha" required>
+                                        <input class="scse-form-control" type="date" data-idcontrol="fecha" required>
+                                        <label class="animated-label" for="">Fecha</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 pl-4">
                                     <div data-control-clone="" data-code="ips" data-type="TF">
                                         <input class="bg-tagify" type="text" data-idcontrol="ips" name="ips" value="" />
+                                        <label class="animated-label" for="">Ips</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div data-control-clone="" data-code="motivo" data-type="TA" class="ExpandableTextArea" data-expandedclass="col-12" data-defaultclass="col-6">
                                         <div class="form-group row p-3">
-                                            <div class="col-12 p-0 containerTextarea" style="min-height: 50px;">
+                                            <label class="col-2 p-0 col-form-label">Motivo</label>
+                                            <div class="col-10 p-0 containerTextarea" style="min-height: 50px;">
                                                 <textarea rows="1" class="form-control" data-idcontrol="motivo" name="motivo" data-required="true"></textarea>
                                                 <img class="ExpandableContainerToggle " src="./images/FlechaB.png">
                                             </div>
@@ -412,12 +419,14 @@
                                         <select class="scse-form-control scse-select select" data-idcontrol="ubic">                                    
                                                     <option value="value1"></option>
                                                 </select>
+                                        <label class="animated-label" for="">Ubicación</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div data-control-clone="" class="scse-form-group" data-code="reco" data-type="SW">
                                         <span class="switch switch-sm">
+                                                <label for="suc_reco">Reconstructiva</label>
                                             <input data-idcontrol="reco" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="divDoTreatmentForAlcohol" />
                                             <label for="reco"></label>
                                         </span>
@@ -428,6 +437,231 @@
                     </div>
                 </div>
                 <!-- fin quirurgicos -->
+                <!-- inicio embarazo actual -->
+                <div id="bgmatern" data-background="" class="bg-data-container">
+                    <label class="bg-title">Embarazo actual y examenes realizados</label>
+                    <div class="row mx-1">
+                        <div class="col-md-3">
+                            <div id="pre_plan" class="scse-form-group" data-control="" data-code="prec_plan" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label for="prec_plan">Embarazo planeado</label>
+                                    <input id="prec_plan" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_plan" />
+                                    <label for="prec_plan"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_des" class="scse-form-group" data-control="" data-code="prec_des" data-type="SW">
+                                <span class="switch switch-sm">
+                                        <label for="prec_des">Embarazo Deseado</label>
+                                        <input id="prec_des" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_des" />
+                                        <label for="prec_des"></label>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_ace" class="scse-form-group" data-control="" data-code="prec_ace" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label for="prec_ace">Embarazo Aceptado</label>
+                                    <input id="prec_ace" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_ace" />
+                                    <label for="prec_ace"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_fma" class="scse-form-group pt-2" data-control="" data-code="fma" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Fracasó metodo anticonceptivo</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_cpc" class="scse-form-group" data-control="" data-code="prec_cpc" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label class="w-50" for="prec_cpc">Consulta preconcepcional</label>
+                                    <input id="prec_cpc" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_cpc" />
+                                    <label for="prec_cpc"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pra_pa" class="scse-form-group pt-2" data-control="" data-code="pa" data-type="TB">
+                                <input class="scse-form-control" type="tex" required>
+                                <label class="animated-label">Peso anterior</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_mfd" class="scse-form-group pt-2" data-control="" data-code="mfd" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                    </select>
+                                <label class="animated-label">Movimientos fetales desde</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_hde" class="scse-form-group pt-2" data-control="" data-code="hde" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                            <option value="value1"></option>
+                                        </select>
+                                <label class="animated-label">Hospitalizada durante embarazo</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-4">
+                            <div id="pra_dig" data-control="" data-code="prac_dig" data-type="TF">
+                                <input class="bg-tagify" type="text" name="prac_dig" value="" />
+                                <label class="animated-label" for="prac_dig">Diagnostico</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pra_exm" class="scse-form-group pt-2" data-control="" data-code="exm" data-type="TB">
+                                <input class="scse-form-control" type="tex" required>
+                                <label class="animated-label">Examen medico</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_exmm" class="scse-form-group pt-2" data-control="" data-code="exmm" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Examen mamas</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_atr" class="scse-form-group pt-2" data-control="" data-code="atr" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                    </select>
+                                <label class="animated-label">antirubeola</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_atp" class="scse-form-group" data-control="" data-code="atp" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label for="prec_atp">Antitetanica previa</label>
+                                    <input id="prec_atp" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_atp" />
+                                    <label for="prec_atp"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_tof" class="scse-form-group" data-control="" data-code="tof" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label for="prec_tof">Tos ferina</label>
+                                    <input id="prec_tof" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_tof" />
+                                    <label for="prec_tof"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_idrh" class="scse-form-group" data-control="" data-code="idrh" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label for="prec_idrh">Inmunización de rh</label>
+                                    <input id="prec_idrh" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_idrh" />
+                                    <label for="prec_idrh"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_coa" class="scse-form-group pt-2" data-control="" data-code="coa" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Coticoides antenatales</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_civ" class="scse-form-group pt-2" data-control="" data-code="civ" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Cervix: Inspección visual</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_tpv" class="scse-form-group pt-2" data-control="" data-code="tpv" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Tamizaje para VPH</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_pap" class="scse-form-group pt-2" data-control="" data-code="pap" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                        <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Papanicolaou</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_col" class="scse-form-group pt-2" data-control="" data-code="col" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Colposcopia</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_cha" class="scse-form-group pt-2" data-control="" data-code="cha" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Chagas</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_mal" class="scse-form-group pt-2" data-control="" data-code="mal" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Malaria</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_ppp" class="scse-form-group pt-2" data-control="" data-code="ppp" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Preparación para el parto</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_eop" class="scse-form-group" data-control="" data-code="prec_eop" data-type="SW">
+                                <span class="switch switch-sm">
+                                    <label class="w-50" for="prec_eop">Eclampsia o preeclampsia</label>
+                                    <input id="prec_eop" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_eop" />
+                                    <label for="prec_eop"></label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="pre_clm" class="scse-form-group pt-2" data-control="" data-code="clm" data-type="SE">
+                                <select class="scse-form-control scse-select select">                                    
+                                    <option value="value1"></option>
+                                </select>
+                                <label class="animated-label">Consejeria lactancia materna</label>
+                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin embarazo actual -->
             </div>
         </div>
     </div>

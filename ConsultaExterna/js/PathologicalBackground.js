@@ -38,6 +38,13 @@ PathologicalBackground.prototype.expandArea = function(e) {
 
 // agraga un diagnostico
 PathologicalBackground.prototype.addDiagnostic = function() {
+    // se valdian los controles si no es valido no se agrega el diagnostico
+    var next = true;
+    this.controls.forEach(function(variable) {
+        variable.validate();
+        if (!variable.Valid) next = false;
+    });
+    if (!next) return;
     // control oculto que se clona
     var Control = this.control.querySelector('[data-clone]');
     // clone

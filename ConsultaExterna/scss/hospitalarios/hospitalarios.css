@@ -36,12 +36,21 @@
 .bg-data-container .scse-form-group input[type=date] ~ .animated-label {
   top: -4px;
   opacity: 1;
-  width: fit-content;
+  width: 83%;
   color: #979494;
   font-size: 12px;
 }
+.bg-data-container .scse-form-group input[type=date] ~ .scse-alert {
+  right: 3.8em;
+}
 .bg-data-container .scse-form-group input[type=number] ~ .animated-label {
-  width: fit-content;
+  width: 90%;
+}
+.bg-data-container .scse-form-group input[type=number] ~ .scse-alert {
+  right: 2em;
+}
+.bg-data-container .scse-form-group input[type=number]::-webkit-outer-spin-button, .bg-data-container .scse-form-group input[type=number]::-webkit-inner-spin-button {
+  cursor: pointer;
 }
 .bg-data-container .plus-bottom.stiky {
   position: absolute;

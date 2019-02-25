@@ -25,6 +25,7 @@ BackgroundControl.prototype = {
     },
     set Valid(value) {
         this._valid = value;
+        this.showAlert();
     },
     get Value() {
         this.getValue()
@@ -43,7 +44,7 @@ BackgroundControl.prototype.getValue = function() {};
 // setea el valor segun el tipo de control
 BackgroundControl.prototype.setValue = function(value) {};
 // validacion por tipo 
-BackgroundControl.prototype.validateByType = function() {};
+BackgroundControl.prototype.validate = function() {};
 
 // setea la visibilidad del control
 BackgroundControl.prototype.changeVisibility = function() {
@@ -55,8 +56,31 @@ BackgroundControl.prototype.changeVisibility = function() {
 };
 
 BackgroundControl.prototype.showAlert = function() {
+    var alert = this.parentControl.querySelector('.scse-alert');
+    if (!this.Valid) {
+        alert.dataset.message = this.control.validationMessage;
+        this.parentControl.classList.add('show-alert');
+    } else {
+        this.parentControl.classList.remove('show-alert');
+    }
 
-}
+};
+
+// BackgroundControl.prototype.getErrorMessage = function() {
+//     // se obtienen los errores del objeto de validacion del control
+//     var message = null;
+//     if (this.control.validity.valueMissing) {
+//         message = "campo requerido";
+//     } else if (this.control.validity.rangeUnderflow) {
+//         message = `el valor debe ser mayor a ${this.control.min}`;
+//     } else if (this.control.validity.rangeOverflow || this.control.validity.tooLong) {
+//         message = `el valor debe ser menor a ${this.control.max}`;
+//     } else if (this.control.validity.stepMismatch || this.control.validity.patternMismatch) {
+//         message = "el valor no coincide";
+//     }
+//     return message;
+// };
+
 
 
 
@@ -88,9 +112,6 @@ BackgroundControlGroupBox.prototype.setValue = function(value) {
 // validacion del valor del campo 
 BackgroundControlGroupBox.prototype.validate = function() {
     var alert = this.parentControl.querySelector('.animated-label');
-    if (this.control.required && !this.Value) {
-        this.showAlert('campo requerido');
-    }
 };
 
 /**********************clase para el tagify*****************************/
@@ -190,11 +211,10 @@ BackgroundControlTextBox.prototype.getValue = function() {
 // obtiene el valor desde el dom
 BackgroundControlTextBox.prototype.setValue = function(value) {
     this.control.value = value;
-    this.validate();
 };
 // validacion del valor del campo 
 BackgroundControlTextBox.prototype.validate = function() {
-    this._valid = this.control.checkValidity();
+    this.Valid = this.control.checkValidity();
     if (this.control.value.trim()) {
         this.control.classList.add('active');
     } else {

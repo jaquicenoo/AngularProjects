@@ -36,15 +36,29 @@ $orange:#ea8807;
         top: -4px;
     }
     .scse-form-group {
-        input[type=date]~.animated-label {
-            top: -4px;
-            opacity: 1;
-            width: fit-content;
-            color: #979494;
-            font-size: 12px;
+        input[type=date] {
+            &~.animated-label {
+                top: -4px;
+                opacity: 1;
+                width: 83%;
+                color: #979494;
+                font-size: 12px;
+            }
+            &~.scse-alert {
+                right: 3.8em;
+            }
         }
-        input[type=number]~.animated-label {
-            width: fit-content;
+        input[type=number] {
+            &~.animated-label {
+                width: 90%;
+            }
+            &~.scse-alert {
+                right: 2em;
+            }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                cursor: pointer;
+            }
         }
     }
     .plus-bottom.stiky {
