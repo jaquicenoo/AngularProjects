@@ -72,7 +72,7 @@
   margin: 0.1em;
   align-items: center;
 }
-.bp-grid-item:hover {
+.bp-grid-item.active {
   cursor: pointer;
   background-color: #93b74b;
   color: #dee2e6;
@@ -145,10 +145,16 @@
   text-align: center;
   color: #dee2e6;
 }
+.bp-tablexam .group-data .scse-form-group input[type=date] {
+  height: 1.5em;
+}
+.bp-tablexam .group-data .scse-form-group.show-alert .scse-alert {
+  top: 0;
+}
 
 .striped-border {
   border: 1px dashed #c2c1c7;
-  width: 95%;
+  width: 97%;
   margin: 1em auto;
 }
 

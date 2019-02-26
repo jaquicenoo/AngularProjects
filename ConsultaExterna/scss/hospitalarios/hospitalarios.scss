@@ -84,7 +84,7 @@ $green:#93b74b;
     border-radius: 3px;
     margin: 0.1em;
     align-items: center;
-    &:hover {
+    &.active {
         cursor: pointer;
         background-color: $green;
         color: $ligthgray;
@@ -154,13 +154,19 @@ $green:#93b74b;
                     color: $ligthgray;
                 }
             }
+            input[type=date] {
+                height: 1.5em;
+            }
+            &.show-alert .scse-alert {
+                top: 0;
+            }
         }
     }
 }
 
 .striped-border {
     border: 1px dashed $gray;
-    width: 95%;
+    width: 97%;
     margin: 1em auto;
 }
 

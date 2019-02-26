@@ -204,6 +204,7 @@ BackgroundControlTextBox.prototype.init = function() {
         this.control.id = this.id + '_C';
         this.parentControl.querySelector('.animated-label').htmlFor = this.id + '_C';
     }
+    if (this.control.value) this.Value = this.control.value;
 };
 // obtiene el valor desde el dom
 BackgroundControlTextBox.prototype.getValue = function() {
@@ -212,6 +213,11 @@ BackgroundControlTextBox.prototype.getValue = function() {
 // obtiene el valor desde el dom
 BackgroundControlTextBox.prototype.setValue = function(value) {
     this.control.value = value;
+    if (this.control.value.trim()) {
+        this.control.classList.add('active');
+    } else {
+        this.control.classList.remove('active');
+    }
 };
 // validacion del valor del campo 
 BackgroundControlTextBox.prototype.validate = function() {
