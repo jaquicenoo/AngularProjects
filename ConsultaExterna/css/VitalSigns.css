@@ -102,15 +102,13 @@
 }
 
 .scse-form-group .scse-form-control.active,
-.scse-form-group .scse-form-control:focus:not(.select),
-.scse-form-group .scse-form-control:valid:not(.select) {
+.scse-form-group .scse-form-control:focus:not(.select) {
     box-shadow: none;
     border-bottom-color: rgba(0, 0, 0, 0.12);
 }
 
 .scse-form-group .scse-form-control.active~.animated-label,
-.scse-form-group .scse-form-control:focus:not(.select)~.animated-label,
-.scse-form-group .scse-form-control:valid:not(.select)~.animated-label {
+.scse-form-group .scse-form-control:focus:not(.select)~.animated-label {
     top: 0;
     opacity: 1;
     color: #979494;

@@ -9,6 +9,7 @@ function BackgroundControl(id, type, code, idParent) {
     this.control = null;
     this._valid = true;
     this._value = null;
+    this.message = null;
     this._visible = true;
 }
 
@@ -59,7 +60,7 @@ BackgroundControl.prototype.changeVisibility = function() {
 BackgroundControl.prototype.showAlert = function() {
     var alert = this.parentControl.querySelector('.scse-alert');
     if (!this.Valid) {
-        alert.dataset.message = this.control.validationMessage;
+        alert.dataset.message = this.message || this.control.validationMessage;
         this.parentControl.classList.add('show-alert');
     } else {
         this.parentControl.classList.remove('show-alert');

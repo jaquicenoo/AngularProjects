@@ -363,7 +363,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 hidden animated fadeIn fast" data-clone="">
+                        <div class="col-md-12 hidden" data-clone="">
                             <hr class="striped-border w-100">
                             <div class="row">
                                 <div class="col-md-6">
@@ -445,7 +445,7 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div id="pre_gesa" class="scse-form-group pt-2" data-control="" data-code="gesa" data-type="TB">
-                                        <input class="scse-form-control" type="number" value="0" readonly>
+                                        <input class="scse-form-control" data-activate="pre_totp,pre_ndemc" type="number" value="0" readonly>
                                         <label class="animated-label">Gestas anteriores</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -519,7 +519,7 @@
                         </div>
                         <div class="col-md-2">
                             <div id="pre_totp" class="scse-form-group pt-2" data-control="" data-code="totp" data-type="TB">
-                                <input class="scse-form-control" type="text" readonly>
+                                <input class="scse-form-control" type="text" readonly required>
                                 <label class="animated-label">Total partos</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
@@ -572,35 +572,35 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div id="pre_viva" class="scse-form-group pt-2" data-control="" data-code="viva" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
                                         <label class="animated-label">Vive aún</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_meus" class="scse-form-group pt-2" data-control="" data-code="meus" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
                                         <label class="animated-label">Muertos(1 y 7 días)</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_meovo" class="scse-form-group pt-2" data-control="" data-code="meovo" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
                                         <label class="animated-label">Muertos (8 y 28 días)</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_medvo" class="scse-form-group pt-2" data-control="" data-code="medvo" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
                                         <label class="animated-label">Muertos después de 28</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_tnva" class="scse-form-group pt-2" data-control="" data-code="tnva" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" data-activate="pre_nrnpmd" type="text" required>
                                         <label class="animated-label">Total nacidos vivos</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -662,14 +662,14 @@
                         </div>
                         <div class="col-md-4">
                             <div id="pre_nrnpmd" class="scse-form-group pt-2" data-control="" data-code="nrnpmd" data-type="TB">
-                                <input class="scse-form-control" type="text" required>
+                                <input class="scse-form-control" type="number">
                                 <label class="animated-label">N° recien nacidos peso menor 2500g</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div id="pre_pdrnm" class="scse-form-group pt-2" data-control="" data-code="pdrnm" data-type="TB">
-                                <input class="scse-form-control" type="text" required>
+                                <input class="scse-form-control" type="text">
                                 <label class="animated-label">Peso del recién nacido de mayor peso g</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
@@ -680,16 +680,33 @@
                             </button>
                         </div>
                         <div class="col-md-8 pl-4">
-                            <div id="pre_newco" data-control="" data-code="prac_newco" data-type="TF">
-                                <input class="bg-tagify" type="text" name="prac_newco" value="" />
+                            <div id="pre_newco" data-control="" data-code="prec_newco" data-type="TF">
+                                <input class="bg-tagify" type="text" name="prec_newco" value="" />
                                 <label class="animated-label" for="prac_newco">Nueva complicación</label>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div id="pre_ndemc" class="scse-form-group pt-2" data-control="" data-code="ndemc" data-type="TB">
-                                <input class="scse-form-control" type="text" required>
+                                <input class="scse-form-control" type="number" min="1">
                                 <label class="animated-label">Embarazo N°</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row hidden" data-clone="">
+                                <div class="col-md-8 pl-4">
+                                    <div data-control-clone="" data-code="newco" data-type="TF">
+                                        <input class="bg-tagify" type="text" name="prec_newco" value="" />
+                                        <label class="animated-label" for="prec_newco">Nueva complicación</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div data-control-clone="" class="scse-form-group pt-2" data-code="ndemc" data-type="TB">
+                                        <input class="scse-form-control" type="number" min="1">
+                                        <label class="animated-label">Embarazo N°</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
