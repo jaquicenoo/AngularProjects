@@ -139,7 +139,7 @@
                 <!-- patologicos  -->
                 <div id="bgpathological" data-background="" class="bg-data-container">
                     <label class="bg-title">Patologicos</label>
-                    <button class="plus-bottom float-right m-2" type="button">
+                    <button class="plus-bottom float-right m-2" data-toggle="confirmation" data-popout="true" type="button">
                             <i class="fa fa-plus" aria-hidden="true"></i>
                     </button>
                     <div class="row m-1">
@@ -258,7 +258,7 @@
                                             <textarea rows="1" class="form-control" data-idcontrol="Observations" name="pac_Observations" data-required="true"></textarea>
                                             <img class="ExpandableContainerToggle" src="./images/FlechaB.png">
                                         </div>
-                                        <button class="plus-bottom stiky float-right" type="button">
+                                        <button class="plus-bottom cancel stiky float-right" data-toggle="confirmation" data-popout="true" type="button">
                                             <i class="fa fa-close" aria-hidden="true"></i>
                                         </button>
                                     </div>
@@ -297,8 +297,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div id="su_proc" class="scse-form-group pt-2" data-control="" data-code="suc_proc" data-type="SE">
-                                        <select class="scse-form-control scse-select select" id="suc_proc">                                    
-                                            <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" id="suc_proc">                                    
+                                            <option value="v1"></option>
                                         </select>
                                         <label class="animated-label" for="@var.Code">Procedimiento</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -312,8 +312,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div id="su_prop" class="scse-form-group pt-2" data-control="" data-code="suc_prop" data-type="SE">
-                                        <select class="scse-form-control scse-select select" id="suc_prop">                                    
-                                                <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" id="suc_prop">                                    
+                                                <option value="v1"></option>
                                             </select>
                                         <label class="animated-label" for="@var.Code">Propósito</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -345,8 +345,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div id="su_ubic" class="scse-form-group pt-2" data-control="" data-code="suc_ubic" data-type="SE">
-                                        <select class="scse-form-control scse-select select" id="suc_ubic">                                    
-                                                    <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" id="suc_ubic">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                         <label class="animated-label" for="@var.Code">Ubicación</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -368,8 +368,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="proc" data-type="SE">
-                                        <select class="scse-form-control scse-select select" data-idcontrol="proc">                                    
-                                            <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" data-idcontrol="proc">                                    
+                                            <option value="v1"></option>
                                         </select>
                                         <label class="animated-label" for="">Procedimiento</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -383,8 +383,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="prop" data-type="SE">
-                                        <select class="scse-form-control scse-select select" data-idcontrol="prop">                                    
-                                                <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" data-idcontrol="prop">                                    
+                                                <option value="v1"></option>
                                             </select>
                                         <label class="animated-label" for="">Proposito</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -416,8 +416,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="ubic" data-type="SE">
-                                        <select class="scse-form-control scse-select select" data-idcontrol="ubic">                                    
-                                                    <option value="value1"></option>
+                                        <select class="scse-form-control scse-select" data-idcontrol="ubic">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                         <label class="animated-label" for="">Ubicación</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -452,28 +452,28 @@
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_parv" class="scse-form-group pt-2" data-control="" data-code="parv" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" max="20" required>
+                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" min="0" max="20" required>
                                         <label class="animated-label">Partos vaginales</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_cesa" class="scse-form-group pt-2" data-control="" data-code="cesa" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" max="20" required>
+                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" min="0" max="20" required>
                                         <label class="animated-label">Cesárea</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_abor" class="scse-form-group pt-2" data-control="" data-code="abor" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" max="20" required>
+                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" min="0" max="20" required>
                                         <label class="animated-label">Abortos</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_ecto" class="scse-form-group pt-2" data-control="" data-code="ecto" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" max="20" required>
+                                        <input class="scse-form-control" data-sum="pre_gesa" type="number" min="0" max="20" required>
                                         <label class="animated-label">Ectópicos</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -484,42 +484,42 @@
                         <label class="bg-title w-100">Partos</label>
                         <div class="col-md-2">
                             <div id="pre_simp" class="scse-form-group pt-2" data-control="" data-code="simp" data-type="TB">
-                                <input class="scse-form-control" data-sum="pre_totp,pre_totns" type="number" max="20" required>
+                                <input class="scse-form-control" data-sum="pre_totp,pre_totns" type="number" min="0" max="20">
                                 <label class="animated-label">Siemple</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div id="pre_geml" class="scse-form-group pt-2" data-control="" data-code="geml" data-type="TB">
-                                <input class="scse-form-control" data-multi="2" data-aplimul="pre_totng" data-sum="pre_totp,pre_totng" type="number" max="20" required>
+                                <input class="scse-form-control" data-multi="2" data-aplimul="pre_totng" data-sum="pre_totp,pre_totng" type="number" min="0" max="20">
                                 <label class="animated-label">Gemelar</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div id="pre_tril" class="scse-form-group pt-2" data-control="" data-code="tril" data-type="TB">
-                                <input class="scse-form-control" data-multi="3" data-aplimul="pre_totnt" data-sum="pre_totp,pre_totnt" type="number" max="20" required>
+                                <input class="scse-form-control" data-multi="3" data-aplimul="pre_totnt" data-sum="pre_totp,pre_totnt" type="number" min="0" max="20">
                                 <label class="animated-label">Trillizos</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div id="pre_cuat" class="scse-form-group pt-2" data-control="" data-code="cuat" data-type="TB">
-                                <input class="scse-form-control" data-multi="4" data-aplimul="pre_totnc" data-sum="pre_totp,pre_totnc" type="number" max="20" required>
+                                <input class="scse-form-control" data-multi="4" data-aplimul="pre_totnc" data-sum="pre_totp,pre_totnc" type="number" min="0" max="20">
                                 <label class="animated-label">Cuatrillizos</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div id="pre_mdfn" class="scse-form-group pt-2" data-control="" data-code="mdfn" data-type="TB">
-                                <input class="scse-form-control" data-sum="pre_totp,pre_totmf" type="number" max="20" required>
+                                <input class="scse-form-control" data-sum="pre_totp,pre_totmf" type="number" min="0" max="20">
                                 <label class="animated-label">Más de 4 nacidos</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div id="pre_totp" class="scse-form-group pt-2" data-control="" data-code="totp" data-type="TB">
-                                <input class="scse-form-control" type="text" readonly required>
+                                <input class="scse-form-control" type="text" readonly>
                                 <label class="animated-label">Total partos</label>
                                 <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                             </div>
@@ -572,35 +572,35 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div id="pre_viva" class="scse-form-group pt-2" data-control="" data-code="viva" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva" min="0" type="number">
                                         <label class="animated-label">Vive aún</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_meus" class="scse-form-group pt-2" data-control="" data-code="meus" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva,pre_nacmu" min="0" max="20" type="number">
                                         <label class="animated-label">Muertos(1 y 7 días)</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_meovo" class="scse-form-group pt-2" data-control="" data-code="meovo" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva,pre_nacmu" min="0" max="30" type="number">
                                         <label class="animated-label">Muertos (8 y 28 días)</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_medvo" class="scse-form-group pt-2" data-control="" data-code="medvo" data-type="TB">
-                                        <input class="scse-form-control" data-sum="pre_tnva" type="text" required>
+                                        <input class="scse-form-control" data-sum="pre_tnva,pre_nacmu" min="0" max="30" type="number">
                                         <label class="animated-label">Muertos después de 28</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md">
                                     <div id="pre_tnva" class="scse-form-group pt-2" data-control="" data-code="tnva" data-type="TB">
-                                        <input class="scse-form-control" data-activate="pre_nrnpmd" type="text" required>
+                                        <input class="scse-form-control" value="0" data-activate="pre_nrnpmd" type="text" readonly>
                                         <label class="animated-label">Total nacidos vivos</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -613,7 +613,7 @@
                                 <div class="col-md right-dotted">
                                     <label class="bg-title w-100 p-0 m-0">Nacidos Muertos</label>
                                     <div id="pre_nacmu" class="scse-form-group p-0 pt-2" data-control="" data-code="nacmu" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" type="text" readonly>
                                         <label class="animated-label">Nacidos muertos</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -627,22 +627,36 @@
                                     </div>
                                 </div>
                                 <div class="col-md" style="padding-top: 1.5em">
-                                    <div id="pre_tipp" class="scse-form-group pt-2" data-control="" data-code="tipp" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                    <div id="pre_tipp" class="scse-form-group pt-2" data-control="" data-code="tipp" data-type="SE">
+                                        <select class="scse-form-control scse-select ">                                    
+                                                    <option value="v1"></option>
+                                                    <option value="pe">espontaneo</option>
+                                                    <option value="pc">cesatia</option>
+                                        </select>
                                         <label class="animated-label">Tipo de parto</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md" style="padding-top: 1.5em">
-                                    <div id="pre_prest" class="scse-form-group pt-2" data-control="" data-code="prest" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                    <div id="pre_prest" class="scse-form-group pt-2" data-control="" data-code="prest" data-type="SE">
+                                        <select class="scse-form-control scse-select">                                    
+                                            <option value="v1"></option>
+                                            <option value="pcef">cefálica</option>
+                                            <option value="pel">pélvica</option>
+                                            <option value="pod">podálica</option>
+                                            <option value="tra">transversa</option>
+                                            <option value="tras">transversa dorso superior</option>
+                                            <option value="trai">transversa dorso inferior</option>
+                                            <option value="dc">de cara</option>
+                                            <option value="opd">otras presentaciones distócicas</option>
+                                        </select>
                                         <label class="animated-label">Presentación</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
                                 <div class="col-md" style="padding-top: 1.5em">
                                     <div id="pre_pnpe" class="scse-form-group pt-2" data-control="" data-code="pnpe" data-type="TB">
-                                        <input class="scse-form-control" type="text" required>
+                                        <input class="scse-form-control" min="0" max="5000" type="number" required>
                                         <label class="animated-label">Peso nacido previo (g)</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
@@ -650,61 +664,70 @@
                             </div>
                         </div>
                         <hr class="striped-border">
-                        <label class="bg-title w-100">Complicaciones</label>
-                        <div class="col-md-4">
-                            <div id="pre_comea" class="scse-form-group pt-3" data-control="" data-code="comea" data-type="SW">
-                                <span class="switch switch-sm row">
-                                    <label class="col-9">Complicaciones embarazos anteriores</label>
-                                    <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_des" />
-                                    <label></label>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="pre_nrnpmd" class="scse-form-group pt-2" data-control="" data-code="nrnpmd" data-type="TB">
-                                <input class="scse-form-control" type="number">
-                                <label class="animated-label">N° recien nacidos peso menor 2500g</label>
-                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="pre_pdrnm" class="scse-form-group pt-2" data-control="" data-code="pdrnm" data-type="TB">
-                                <input class="scse-form-control" type="text">
-                                <label class="animated-label">Peso del recién nacido de mayor peso g</label>
-                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <button class="plus-bottom float-right" type="button">
-                                    <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                        <div class="col-md-8 pl-4">
-                            <div id="pre_newco" data-control="" data-code="prec_newco" data-type="TF">
-                                <input class="bg-tagify" type="text" name="prec_newco" value="" />
-                                <label class="animated-label" for="prac_newco">Nueva complicación</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="pre_ndemc" class="scse-form-group pt-2" data-control="" data-code="ndemc" data-type="TB">
-                                <input class="scse-form-control" type="number" min="1">
-                                <label class="animated-label">Embarazo N°</label>
-                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="row hidden" data-clone="">
-                                <div class="col-md-8 pl-4">
-                                    <div data-control-clone="" data-code="newco" data-type="TF">
-                                        <input class="bg-tagify" type="text" name="prec_newco" value="" />
-                                        <label class="animated-label" for="prec_newco">Nueva complicación</label>
+                        <div class="col-md-12 hidden animated fadeIn fast" id="complicaciones">
+                            <div class="row">
+                                <label class="bg-title w-100">Complicaciones</label>
+                                <div class="col-md-4">
+                                    <div id="pre_comea" class="scse-form-group pt-3" data-control="" data-code="comea" data-type="SW">
+                                        <span class="switch switch-sm row">
+                                                <label class="col-9">Complicaciones embarazos anteriores</label>
+                                                <input class="col-2" type="checkbox" class="switch" data-input-action="hide-show" data-action-for="prec_des" />
+                                                <label></label>
+                                            </span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div data-control-clone="" class="scse-form-group pt-2" data-code="ndemc" data-type="TB">
+                                    <div id="pre_nrnpmd" class="scse-form-group pt-2" data-control="" data-code="nrnpmd" data-type="TB">
+                                        <input class="scse-form-control" type="number" min="0" max="0">
+                                        <label class="animated-label">N° recien nacidos peso menor 2500g</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="pre_pdrnm" class="scse-form-group pt-2" data-control="" data-code="pdrnm" data-type="TB">
+                                        <input class="scse-form-control" type="text">
+                                        <label class="animated-label">Peso del recién nacido de mayor peso g</label>
+                                        <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="plus-bottom float-right" type="button">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </button>
+                                </div>
+                                <div class="col-md-8 pl-4">
+                                    <div id="pre_newco" data-control="" data-code="prec_newco" data-type="TF">
+                                        <input class="bg-tagify" type="text" name="prec_newco" value="" />
+                                        <label class="animated-label" for="prac_newco">Nueva complicación</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="pre_ndemc" class="scse-form-group pt-2" data-control="" data-code="ndemc" data-type="TB">
                                         <input class="scse-form-control" type="number" min="1">
                                         <label class="animated-label">Embarazo N°</label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row hidden" data-clone="">
+                                        <div class="col-md-7 pl-4">
+                                            <div data-control-clone="" data-code="newco" data-type="TF">
+                                                <input class="bg-tagify" type="text" name="prec_newco" value="" />
+                                                <label class="animated-label" for="prec_newco">Nueva complicación</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div data-control-clone="" class="scse-form-group pt-2" data-code="ndemc" data-type="TB">
+                                                <input class="scse-form-control" type="number" min="1">
+                                                <label class="animated-label">Embarazo N°</label>
+                                                <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="colo-md-1 p-3">
+                                            <button class="plus-bottom cancel" type="button">
+                                                    <i class="fa fa-close" aria-hidden="true"></i>
+                                                </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -754,8 +777,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_fma" class="scse-form-group pt-2" data-control="" data-code="fma" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
-                                            <option value="value1"></option>
+                                    <select class="scse-form-control scse-select">                                    
+                                            <option value="v1"></option>
                                         </select>
                                     <label class="animated-label">Fracasó metodo anticonceptivo</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -772,7 +795,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="prr_pa" class="scse-form-group pt-2" data-control="" data-code="pa" data-type="TB">
-                                    <input class="scse-form-control" type="text" required>
+                                    <input class="scse-form-control" type="number" required>
                                     <label class="animated-label">Peso anterior</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                 </div>
@@ -801,7 +824,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_exm" class="scse-form-group pt-2" data-control="" data-code="exm" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -813,7 +836,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_exmm" class="scse-form-group pt-2" data-control="" data-code="exmm" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -825,7 +848,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_atr" class="scse-form-group pt-2" data-control="" data-code="atr" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">no</option>
                                             <option value="vns">no se sabe</option>
@@ -848,7 +871,7 @@
                             </div>
                             <div class="col-md-3 hidden">
                                 <div id="pre_atpmpd" class="scse-form-group pt-2" data-control="" data-code="atpmpd" data-type="SE">
-                                    <select class="scse-form-control scse-select select" data-activate="pre_atpmsd">                                    
+                                    <select class="scse-form-control scse-select" data-activate="pre_atpmsd">                                    
                                                 <option value="v1"></option>
                                                 <option value="v2">1</option>
                                                 <option value="v3">2</option>
@@ -866,7 +889,7 @@
                             </div>
                             <div class="col-md-3 hidden">
                                 <div id="pre_atpmsd" class="scse-form-group pt-2" data-control="" data-code="atpmsd" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                                     <option value="v1"></option>
                                                     <option value="v2">1</option>
                                                     <option value="v3">2</option>
@@ -911,8 +934,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_coa" class="scse-form-group pt-2" data-control="" data-code="coa" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
-                                                <option value="value1"></option>
+                                    <select class="scse-form-control scse-select">                                    
+                                                <option value="v1"></option>
                                         </select>
                                     <label class="animated-label">Coticoides antenatales</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -920,7 +943,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_civ" class="scse-form-group pt-2" data-control="" data-code="civ" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -932,7 +955,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_tpv" class="scse-form-group pt-2" data-control="" data-code="tpv" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -944,7 +967,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_pap" class="scse-form-group pt-2" data-control="" data-code="pap" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -956,7 +979,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_col" class="scse-form-group pt-2" data-control="" data-code="col" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vn">normal</option>
                                             <option value="va">anormal</option>
@@ -968,7 +991,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_cha" class="scse-form-group pt-2" data-control="" data-code="cha" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
+                                    <select class="scse-form-control scse-select">                                    
                                             <option value="v1"></option>
                                             <option value="vp">Positivo</option>
                                             <option value="vn">Negativo</option>
@@ -980,8 +1003,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_mal" class="scse-form-group pt-2" data-control="" data-code="mal" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
-                                            <option value="value1"></option>
+                                    <select class="scse-form-control scse-select">                                    
+                                            <option value="v1"></option>
                                         </select>
                                     <label class="animated-label">Malaria</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -989,8 +1012,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_ppp" class="scse-form-group pt-2" data-control="" data-code="ppp" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
-                                            <option value="value1"></option>
+                                    <select class="scse-form-control scse-select">                                    
+                                            <option value="v1"></option>
                                         </select>
                                     <label class="animated-label">Preparación para el parto</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1007,8 +1030,8 @@
                             </div>
                             <div class="col-md-3">
                                 <div id="pre_clm" class="scse-form-group pt-2" data-control="" data-code="clm" data-type="SE">
-                                    <select class="scse-form-control scse-select select">                                    
-                                            <option value="value1"></option>
+                                    <select class="scse-form-control scse-select">                                    
+                                            <option value="v1"></option>
                                         </select>
                                     <label class="animated-label">Consejeria lactancia materna</label>
                                     <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1277,8 +1300,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div id="pre_ltresu" class="scse-form-group pt-2 m-0" data-control="" data-code="ltresu" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                    <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                             <label class="animated-label">Resultado</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1286,8 +1309,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div id="pre_ltcons" class="scse-form-group pt-2 m-0" data-control="" data-code="ltcons" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                    <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                             <label class="animated-label">Consejeria</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1341,8 +1364,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div id="pre_metresu" class="scse-form-group pt-2 m-0" data-control="" data-code="metresu" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Resultado</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1350,8 +1373,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div id="pre_metcons" class="scse-form-group pt-2 m-0" data-control="" data-code="metcons" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Consejeria</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1365,8 +1388,8 @@
                                     <label class="col-12 m-0" style="color: black">1do Trimestre</label>
                                     <div class="col-12">
                                         <div id="pre_perfrm" class="scse-form-group pt-2 m-0" data-control="" data-code="perfrm" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                    <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                             <label class="animated-label">Fuma</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1374,8 +1397,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_percad" class="scse-form-group pt-2 m-0" data-control="" data-code="percad" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select ">                                    
+                                                        <option value="v1"></option>
                                                 </select>
                                             <label class="animated-label">Cigarrillos al dia</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1392,8 +1415,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_perdro" class="scse-form-group pt-2 m-0" data-control="" data-code="perdro" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                    <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                    <option value="v1"></option>
                                                 </select>
                                             <label class="animated-label">Drogas</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1424,8 +1447,8 @@
                                     <label class="col-12 m-0" style="color: black">2do Trimestre</label>
                                     <div class="col-12">
                                         <div id="pre_sdofrm" class="scse-form-group pt-2 m-0" data-control="" data-code="sdofrm" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Fuma</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1433,8 +1456,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_sdocad" class="scse-form-group pt-2 m-0" data-control="" data-code="sdocad" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                            <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                            <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Cigarrillos al dia</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1451,8 +1474,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_sdodro" class="scse-form-group pt-2 m-0" data-control="" data-code="sdodro" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Drogas</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1483,8 +1506,8 @@
                                     <label class="col-12 m-0" style="color: black">3er Trimestre</label>
                                     <div class="col-12">
                                         <div id="pre_tcrfrm" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrfrm" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Fuma</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1492,8 +1515,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_tcrcad" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrcad" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                            <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                            <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Cigarrillos al dia</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1510,8 +1533,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div id="pre_tcrdro" class="scse-form-group pt-2 m-0" data-control="" data-code="tcrdro" data-type="SE">
-                                            <select class="scse-form-control scse-select select">                                    
-                                                        <option value="value1"></option>
+                                            <select class="scse-form-control scse-select">                                    
+                                                        <option value="v1"></option>
                                                     </select>
                                             <label class="animated-label">Drogas</label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
@@ -1550,6 +1573,9 @@
 
 <!-- scripts principales -->
 <script src="./lib/jquery/dist/jquery.js"></script>
+<script src="./lib/popper/popper.js"></script>
+<script src="./lib/bootstrap4/js/bootstrap.js"></script>
+<script src="./lib/Bootstrap-Confirmation-master/dist/bootstrap-confirmation.min.js"></script>
 <!-- @*<script src="https://cdnjs.cloudflare.cjom/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>*@ -->
 <script src="./lib/jquery-validation/dist/jquery.validate.js"></script>
 <script src="./lib/jquery/dist/jquery-ui.js"></script>

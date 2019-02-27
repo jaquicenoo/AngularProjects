@@ -52,16 +52,18 @@
 .bg-data-container .scse-form-group input[type=number]::-webkit-outer-spin-button, .bg-data-container .scse-form-group input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
 }
-.bg-data-container .plus-bottom.stiky {
-  position: absolute;
-  right: -4em;
-  bottom: 0;
+.bg-data-container .plus-bottom.cancel {
   color: #ea8807;
   border-color: #ea8807;
 }
-.bg-data-container .plus-bottom.stiky:hover {
+.bg-data-container .plus-bottom.cancel:hover {
   background-color: #ea8807;
   color: white;
+}
+.bg-data-container .plus-bottom.cancel.stiky {
+  position: absolute;
+  right: -4em;
+  bottom: 0;
 }
 
 .bp-grid-item {

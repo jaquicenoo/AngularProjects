@@ -64,12 +64,24 @@ BasePregnancyBackground.prototype.activateVariable = function(e) {
                         variable.message = null;
                         variable.Valid = true;
                     }
-                } else variable.control.max = e.target.value;
+                } else {
+                    variable.control.max = e.target.value;
+                    variable.validate();
+                }
             }, this);
+            // activa las complicaciones dependiendo del valor de las gestas
+            if (e.target.valueAsNumber !== 0) {
+                this.control.querySelector('#complicaciones').classList.remove('hidden');
+            } else {
+                this.control.querySelector('#complicaciones').classList.add('hidden');
+            }
             break;
         case 'pre_tnva':
             var variable = this.controls.find(v => v.id === e.target.dataset.activate);
-            if (variable) variable.control.max = e.target.value;
+            if (variable) {
+                variable.control.max = e.target.value;
+                variable.validate();
+            }
             break;
         case 'pre_atpmpd':
             activeCodes = e.target.dataset.activate.split(',');
@@ -123,6 +135,7 @@ BasePregnancyBackground.prototype.summaryze = async function(e) {
                 }
 
             }, this);
+            // se verifica que el numero de partos sea igualo al numero de gestas
             if (variable.id === 'pre_totp') {
                 var gestas = this.controls.find(v => v.id === 'pre_gesa');
                 if (value != parseInt(gestas.Value)) {
@@ -161,13 +174,20 @@ BasePregnancyBackground.prototype.addDiagnostic = function() {
     // clone
     var ControlClone = Control.cloneNode(true);
     // se valdian los controles si no es valido no se agrega el diagnostico
-    var next = true;
-    ControlClone.querySelectorAll('[data-control-clone]').forEach(function(variable) {
-        var vartovalid = this.controls.find(v => v.id === 'pre_' + variable.dataset.code);
-        vartovalid.validate();
-        if (!vartovalid.Valid) next = false;
-    }, this);
-    if (!next) return;
+    var pregFilter = this.diagnostics.filter(diag => diag.code === 'ndemc');
+    var fieldNpreg = this.controls.find(v => v.id === 'pre_ndemc');
+    fieldNpreg.validate();
+    if (fieldNpreg.Valid) {
+        // se verifica que el nuemero de embarazo ingresado no exista
+        if (pregFilter.filter(diag => diag.Value === fieldNpreg.Value).length > 0) {
+            fieldNpreg.message = 'El numero de embarazo ya existe';
+            fieldNpreg.Valid = false;
+        } else {
+            fieldNpreg.message = null;
+            fieldNpreg.Valid = true;
+        }
+    }
+    if (!fieldNpreg.Valid) return;
     ControlClone.dataset.expand = "";
     ControlClone.classList.remove('hidden');
     Control.parentElement.appendChild(ControlClone);
@@ -178,7 +198,6 @@ BasePregnancyBackground.prototype.addDiagnostic = function() {
         delete variable.dataset.controlClone;
         variable.dataset.control = "";
         variable.id = 'pre_' + controlid + this.count;
-        variable.dataset.code = 'pre_' + controlid + this.count;
         // seteo de valores y limpia las variables
         var backControl = this.createControlByType(variable.id, variable.dataset.type, variable.dataset.code, this.code);
         var varToSet = this.controls.find(v => v.id === 'pre_' + controlid);
@@ -186,6 +205,22 @@ BasePregnancyBackground.prototype.addDiagnostic = function() {
         backControl.Value = varToSet.Value;
         varToSet.Value = null;
         this.controls.push(backControl);
+        this.diagnostics.push(backControl);
     }, this);
     this.count++;
+};
+// borrado de diagnosticos 
+BasePregnancyBackground.prototype.removeDiagnostic = function(e) {
+    var parent = e.target.closest('[data-clone]');
+    parent.querySelectorAll('[data-control]').forEach(function(control) {
+        var variable = this.controls.find(v => v.code === control.dataset.code);
+        if (variable) {
+            var index = this.controls.indexOf(variable);
+            delete this.controls[index];
+            this.controls.splice(index, 1);
+            delete this.diagnostics[index];
+            this.diagnostics.splice(index, 1);
+        }
+    }, this);
+    parent.remove();
 };

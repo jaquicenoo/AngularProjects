@@ -52,7 +52,7 @@ PathologicalBackground.prototype.addDiagnostic = function() {
     ControlClone.dataset.expand = "";
     ControlClone.classList.remove('hidden');
     Control.parentElement.appendChild(ControlClone);
-    ControlClone.querySelector('.plus-bottom').addEventListener('click', this.removeDiagnostic.bind(this))
+    ControlClone.querySelector('.plus-bottom').addEventListener('click', this.removeDiagnostic.bind(this));
     ControlClone.querySelectorAll('[data-control-clone]').forEach(function(variable) {
         var controlid = variable.dataset.code;
         // deja de ser un clone

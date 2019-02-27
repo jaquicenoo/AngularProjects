@@ -288,9 +288,9 @@ BackgroundControlSelect.prototype.setValue = function(value) {
 // validacion del valor del campo 
 BackgroundControlSelect.prototype.validate = function() {
     if (this.Value !== 'v1') {
-        this.control.classList.remove('select');
+        this.control.classList.add('active');
     } else {
-        this.control.classList.add('select');
+        this.control.classList.remove('active');
     }
 };
 /************************************************************************/

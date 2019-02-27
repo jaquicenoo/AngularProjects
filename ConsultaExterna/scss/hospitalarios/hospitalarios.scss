@@ -64,15 +64,17 @@ $green:#93b74b;
             }
         }
     }
-    .plus-bottom.stiky {
-        position: absolute;
-        right: -4em;
-        bottom: 0;
+    .plus-bottom.cancel {
         color: $orange;
         border-color: $orange;
         &:hover {
             background-color: $orange;
             color: white;
+        }
+        &.stiky {
+            position: absolute;
+            right: -4em;
+            bottom: 0;
         }
     }
 }
