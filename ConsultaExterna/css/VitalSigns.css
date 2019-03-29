@@ -206,6 +206,7 @@
 .scse-alert:before {
     background: white;
     border-radius: 5px;
+    z-index: 1;
     border: 1px solid;
     content: attr(data-message);
     font-size: 10px;

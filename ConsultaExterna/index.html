@@ -30,6 +30,8 @@
 
     <link href="./css/Background.css" rel="stylesheet" />
     <link href="./scss/hospitalarios/hospitalarios.css" rel="stylesheet">
+    <link href="./scss/searches/SearchAssistant.css" rel="stylesheet">
+    <link href="./scss/loginSearch/LoginSearch.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -139,7 +141,7 @@
                 <!-- patologicos  -->
                 <div id="bgpathological" data-background="" class="bg-data-container">
                     <label class="bg-title">Patologicos</label>
-                    <button class="plus-bottom float-right m-2" data-toggle="confirmation" data-popout="true" type="button">
+                    <button id="btnplus" class="plus-bottom float-right m-2" data-toggle="confirmation" data-popout="true" type="button">
                             <i class="fa fa-plus" aria-hidden="true"></i>
                     </button>
                     <div class="row m-1">
@@ -170,8 +172,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div id="pa_code" class="scse-form-group pt-2" data-control="" data-code="pac_code" data-type="TB">
-                                            <input class="scse-form-control" type="text" pattern="[0-9]+" min="0" max="100" required>
+                                            <input class="scse-form-control" type="number" min="0" max="100" required>
                                             <label class="animated-label">Código</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message="please enter number only"><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -179,6 +182,7 @@
                                         <div id="pa_org" class="scse-form-group pt-2" data-control="" data-code="pac_org" data-type="TB">
                                             <input class="scse-form-control" type="text" required>
                                             <label class="animated-label">Origen</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -186,6 +190,7 @@
                                         <div id="pa_datebg" class="scse-form-group pt-2" data-control="" data-code="pac_datebg" data-type="TB">
                                             <input class="scse-form-control" type="date" max="2019-02-25" required>
                                             <label class="animated-label">Fecha de diagnóstico</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -193,6 +198,7 @@
                                         <div id="pa_age" class="scse-form-group pt-2" data-control="" data-code="pac_age" data-type="TB">
                                             <input class="scse-form-control" type="number" min="0" max="200" required>
                                             <label class="animated-label">Edad</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -224,6 +230,7 @@
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="code" data-type="TB">
                                             <input class="scse-form-control" type="text" data-idcontrol="code" required>
                                             <label class="animated-label">Código</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -231,6 +238,7 @@
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="org" data-type="TB">
                                             <input class="scse-form-control" type="text" data-idcontrol="org" required>
                                             <label class="animated-label">Origen</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -238,6 +246,7 @@
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="datebg" data-type="TB">
                                             <input class="scse-form-control" type="date" data-idcontrol="datebg" required>
                                             <label class="animated-label">Fecha de origen</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -245,6 +254,7 @@
                                         <div class="scse-form-group pt-2" data-control-clone="" data-code="age" data-type="TB">
                                             <input class="scse-form-control" type="number" data-idcontrol="age" required>
                                             <label class="animated-label">Edad</label>
+                                            <label class="border-alert"></label>
                                             <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                         </div>
                                     </div>
@@ -301,6 +311,7 @@
                                             <option value="v1"></option>
                                         </select>
                                         <label class="animated-label" for="@var.Code">Procedimiento</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -316,6 +327,7 @@
                                                 <option value="v1"></option>
                                             </select>
                                         <label class="animated-label" for="@var.Code">Propósito</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -323,6 +335,7 @@
                                     <div id="su_fecha" class="scse-form-group pt-2" data-control="" data-code="suc_fecha" data-type="TB">
                                         <input class="scse-form-control" type="date" id="suc_fecha" required>
                                         <label class="animated-label" for="suc_fecha">Fecha</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -349,6 +362,7 @@
                                                     <option value="v1"></option>
                                                 </select>
                                         <label class="animated-label" for="@var.Code">Ubicación</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -372,6 +386,7 @@
                                             <option value="v1"></option>
                                         </select>
                                         <label class="animated-label" for="">Procedimiento</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -387,6 +402,7 @@
                                                 <option value="v1"></option>
                                             </select>
                                         <label class="animated-label" for="">Proposito</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -394,6 +410,7 @@
                                     <div class="scse-form-group pt-2" data-control-clone="" data-code="fecha" data-type="TB">
                                         <input class="scse-form-control" type="date" data-idcontrol="fecha" required>
                                         <label class="animated-label" for="">Fecha</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -401,6 +418,7 @@
                                     <div data-control-clone="" data-code="ips" data-type="TF">
                                         <input class="bg-tagify" type="text" data-idcontrol="ips" name="ips" value="" />
                                         <label class="animated-label" for="">Ips</label>
+                                        <label class="border-alert"></label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -420,6 +438,7 @@
                                                     <option value="v1"></option>
                                                 </select>
                                         <label class="animated-label" for="">Ubicación</label>
+                                        <label class="border-alert"></label>
                                         <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
                                     </div>
                                 </div>
@@ -1567,7 +1586,347 @@
             <!-- fin embarazo actual -->
         </div>
     </div>
-    </div>
+    <div id="searchassistant" class="sa-container">
+        <div class="sa-title left">
+            Histórico
+        </div>
+        <div class="row m-1">
+            <div class="col-md-5 mt-4 pr-0">
+                <div class="sa-container mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="sa-title">
+                                <i class="fas fa-eraser"></i> Asistente de búsqueda
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-1 mt-3">
+                        <div class="col-md-12 mt-3">
+                            <div class="row mx-1 check-group">
+                                <label class="sa-check-label col-sm-4 m-0">Tipo de atención:</label>
+                                <div class="col-sm p-0">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-fill justify-content-start">
+                                            <input class="form-check-input" type="checkbox" name="sa_tipoat" id="sa_ambu">
+                                            <label class="form-check-label" for="sa_ambu">Ambulatoria</label>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-fill justify-content-end">
+                                            <input class="form-check-input" type="checkbox" name="sa_tipoat" id="sa_hosp">
+                                            <label class="form-check-label" for="sa_hosp">Hospitalización</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <div class="row mx-1 mt-2">
+                                <label class="sa-check-label col-sm-4 m-0">Tipo de consulta:</label>
+                                <div id="filter" class="col-sm p-0">
+                                    <div class="d-flex">
+                                        <div class="form-check form-check-inline flex-fill">
+                                            <input class="form-check-input" type="radio" name="sa_tipoco" id="sa_nocli" checked>
+                                            <label class="form-check-label" for="sa_nocli"></label>
+                                            <span>  Notas Clinicas</span>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-fill sa-ml">
+                                            <input class="form-check-input" type="radio" name="sa_tipoco" id="sa_orme">
+                                            <label class="form-check-label" for="sa_orme"></label>
+                                            <span>  Órdenes médicas</span>
+                                        </div>
+                                        <div class="form-check form-check-inline flex-fill sa-ml">
+                                            <input class="form-check-input" type="radio" name="sa_tipoco" id="sa_sigva">
+                                            <label class="form-check-label" for="sa_sigva"></label>
+                                            <span>  Signos y variables</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="conOrdenes" class="row mx-0 hidden-xs animated fadeIn fast">
+                            <div class="col-md-12 mt-2">
+                                <div class=" row m-1 sa-select-form">
+                                    <label class="sa-label">Realizar busqueda desde</label>
+                                    <input type="date" class="date-picker col">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <hr class="striped-border">
+                            </div>
+                            <div class="col-md-12">
+                                <strong class="py-2 mt-3">Órdenes médicas</strong>
+                            </div>
+                            <div class="col-sm-3 pr-0">
+                                <label for="BgPerinatalFood" class="materialInput">
+                                        <select class="scse-select" id="BgPerinatalFood">
+                                            <option value="-1"></option>
+                                        </select>
+                                        <span class="label">Tipo de orden</span>
+                                        <span class="border"></span>
+                                    </label>
+                            </div>
+                            <div class="col-sm-7 pt-3 pr-0">
+                                <div id="sa_tagify">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Actividad ordenada" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col p-0 text-center">
+                                <button id="btnplus" class="search-bottom m-2" type="button">
+                                        <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="conNotas" class="row mx-0 animated fadeIn fast">
+                            <div class="col-md-12 mt-2">
+                                <div class=" row m-1 sa-select-form">
+                                    <label class="sa-label">Rango de fechas: de</label>
+                                    <input type="date" class="date-picker col-3">
+                                    <label class="sa-label">a</label>
+                                    <input type="date" class="date-picker col">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <hr class="striped-border">
+                            </div>
+                            <div class="col-md-12">
+                                <strong class="py-2 mt-3">Notas clínicas</strong>
+                            </div>
+                            <div class="col-sm-12">
+                                <div id="sa_Especial">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Procedimiento" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <strong class="py-2 mt-3">Lista de atenciones</strong>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <div class="loader hidden">
+                                    <img src="/images/Gif1.gif" width="50" height="50" alt="">
+                                </div>
+                                <div class="note-container">
+                                    <div class="form-check attention-note form-check-inline w-100">
+                                        <input class="form-check-input" type="checkbox" name="(idnota)" id="(idnota1)" checked>
+                                        <label class="form-check-label" for="(idnota1)">
+                                            <div class="row mx-1">
+                                                <div class="col-sm-3 px-1">
+                                                    <strong>Especialidad</strong><br>
+                                                    Oncologia
+                                                </div>
+                                                <div class="col-sm-3 px-1">
+                                                    <strong>Fecha inicial</strong><br>
+                                                    31/01/2016 10:20
+                                                </div>
+                                                <div class="col-sm-3 px-1">
+                                                    <strong>Fecha final</strong><br>
+                                                    31/01/2016 10:20
+                                                </div>
+                                                <div class="col-sm-3 px-1">
+                                                    <strong>Tipo de atención</strong><br>
+                                                    Hospitalización
+                                                </div>
+                                                <div class="col-sm-12 px-1 mt-2">
+                                                        <strong>Diagnóstico principal</strong><br>
+                                                        TUMOR MALIGNO DE LA MAMA
+                                                    </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="form-check attention-note form-check-inline w-100">
+                                        <input class="form-check-input" type="checkbox" name="(idnota)" id="(idnota2)">
+                                        <label class="form-check-label" for="(idnota2)">
+                                                <div class="row mx-1">
+                                                    <div class="col-sm-3 px-1">
+                                                        <strong>Especialidad</strong><br>
+                                                        Oncologia
+                                                    </div>
+                                                    <div class="col-sm-3 px-1">
+                                                        <strong>Fecha inicial</strong><br>
+                                                        31/01/2016 10:20
+                                                    </div>
+                                                    <div class="col-sm-3 px-1">
+                                                        <strong>Fecha final</strong><br>
+                                                        31/01/2016 10:20
+                                                    </div>
+                                                    <div class="col-sm-3 px-1">
+                                                        <strong>Tipo de atención</strong><br>
+                                                        Hospitalización
+                                                    </div>
+                                                    <div class="col-sm-12 px-1 mt-2">
+                                                            <strong>Diagnóstico principal</strong><br>
+                                                            TUMOR MALIGNO DE LA MAMA
+                                                        </div>
+                                                </div>
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pr-md-1 mt-2">
+                                <div id="sa_noteType">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Tipo nota" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-md-1 p mt-2">
+                                <div id="sa_services">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Tipo nota" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row mx-0">
+                                    <div class="form-check form-check-inline col-6 px-3 justify-content-start">
+                                        <input class="form-check-input" type="checkbox" name="sa_firma" id="sa_firmados">
+                                        <label class="form-check-label" for="sa_firmados">Firmados</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-6 px-3 justify-content-start">
+                                        <input class="form-check-input" type="checkbox" name="sa_firma" id="sa_pendientes">
+                                        <label class="form-check-label" for="sa_pendientes">Pendientes de firma</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pr-md-1 pt-3 pr-0">
+                                <div id="sa_firmadopor">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Firmado por" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-4 pl-md-1 pt-3 pr-0">
+                                <div id="sa_guardadopor">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Guardado por" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="col p-0 text-center">
+                                <button id="btnplus" class="search-bottom m-2" type="button">
+                                            <i class="fas fa-search"></i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 mt-5 pl-0">
+                <strong class="py-2 mt-3">Notas Clínicas</strong>
+                <div class="order-container">
+                    <div id="cad" class="sa-container grid p-3">
+                        <div id="notes">
+                            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi
+                            concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum. Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis
+                            rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum. Ambitioni
+                            dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt
+                            uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum. Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate
+                            felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+                            <hr class="striped-border">
+                            <div class="explanatory container-note" name="btn-0">
+                            </div>
+                        </div>
+                        <div class="sa-action-content">
+                            <img class="hidden" src="/images/Editar.png" alt="">
+                            <div class="action-ico print"></div>
+                            <button id="btn-0" class="action-ico notes" data-container="body" data-toggle="popover" data-placement="top" data-html="true"></button>
+                            <button class="action-ico notes-related" data-container="body" data-toggle="popover" data-placement="top" data-html="true"></button>
+                            <div class="action-ico edit"></div>
+                            <div class="signContainer" id="signingDiv" style="visibility: visible;">
+                                <div class="hero">
+                                    <label for="name" class="lblSign">Firma</label>
+                                    <input id="signInput" type="password" name="user_name" class="inputSign">
+                                    <img id="clearBtn" class="circleButton" src="/images/x_1xxxhdpi.png">
+                                    <img id="okBtn" class="circleButton" src="/images/Check_1xxxhdpi.png">
+                                </div>
+                                <img class="expander circleButton" src="/images/Firmaoffxxxhdpi.png" style="height:35px; width: 35px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sa-container p-3">
+                        Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi
+                        concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+                        <!-- <div class="signContainer" id="signingDiv" style="visibility: visible;">
+                            <div class="hero">
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <label for="name" class="lblSign">Firma</label>
+                                <input id="signInput" type="password" name="user_name" class="inputSign">
+                                <img id="clearBtn" class="circleButton" src="/images/x_1xxxhdpi.png">
+                                <img id="okBtn" class="circleButton" src="/images/Check_1xxxhdpi.png">
+                            </div>
+                        </div> -->
+                        <!-- <div class="pop-signature">
+                            <label class="title">Nota aclaratoria de medicina general</label>
+                            <textarea></textarea>
+                            <label for="name" class="lblSign">Firma</label>
+                            <input id="signInput" type="password" name="user_name" class="inputSign">
+                            <div class="sa-btn-group">
+                                <img id="clearBtn" class="circleButton" src="/images/x_1xxxhdpi.png">
+                                <img id="okBtn" class="circleButton" src="/images/Check_1xxxhdpi.png">
+                            </div>
+                        </div> -->
+                        <div class="sa-container p-3">
+                            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi
+                            concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+                        </div>
+                        <div class="sa-container p-3">
+                            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi
+                            concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Launch demo modal
+      </button>
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-sm" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content sa-login">
+                    <div class="modal-body">
+                        <div class="lg-header">
+                            <img src="/images/LupaBuscador.png" alt="">
+                        </div>
+                        <div class="login-cotent">
+                            <label class="title">Buscar paciente por</label>
+                            <div class="log-selector mt-3">
+                                <div class="item-group">
+                                    <button class="log-img doc"></button>
+                                    <label> Documento</label>
+                                </div>
+                                <div class="item-group">
+                                    <button class="log-img name"></button>
+                                    <label>Nombre</label>
+                                </div>
+                                <div class="item-group">
+                                    <button class="log-img hc"></button>
+                                    <label>Identificador único</label>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex justify-content-center">
+                                <div id="sa_selectpatient" class="search">
+                                    <input data-tagify="" class="tagify--outside" placeholder="Nombre" required />
+                                    <label class="border-alert"></label>
+                                    <span class="scse-alert expand" data-alert="" data-message=""><i class="fas fa-times"></i></span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mr-3">
+                                <button id="search_cancel" class="lg-btn cancel"> 
+                                    <i class="fa fa-close"></i> 
+                                </button>
+                                <button id="search_ok" class="lg-btn ok">
+                                    <i class="fa fa-check"></i> 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 
@@ -1597,10 +1956,44 @@
     <script src="./js/PathologicalBackground.js" type="text/javascript"></script>
     <script src="./js/SurgicalBackground.js" type="text/javascript"></script>
     <script src="./js/PregnancyBackground.js" type="text/javascript"></script>
+    <script src="./js/SearchAssistant.js" type="text/javascript"></script>
     <!-- scripting  -->
     <script>
         $(document).ready(function() {
             let background = new BackgroundsComponent();
+            let search = new SearchAsistant();
+            search.init();
+
+            $.each($('.action-ico.notes-related'), function(key, value) {
+                $(value).popover({
+                    html: true,
+                    content: function() {
+                        return `<ul class="pop-related-notes">
+                    <li id="lcex">Lesiones de causa externa</li>
+                    <li id="conin">Consentimiento informado</li>
+                    <li id="recoegre">Recomendaciones de egreso</li>
+                    </ul>`;
+                    }
+                })
+            });
+            $.each($('.action-ico.notes'), function(key, value) {
+                $(value).popover({
+                    html: true,
+                    content: function() {
+                        return ` 
+                        <div class="pop-signature">
+                        <label class="title">Nota aclaratoria de medicina general</label>
+                        <textarea required></textarea>
+                        <label for="name" class="lblSign">Firma</label>
+                        <input id="signInput" type="password" name="user_name" class="inputSign" required>
+                        <div class="sa-btn-group">
+                        <img id="clearBtn" class="circleButton" src="/images/x_1xxxhdpi.png">
+                        <img id="okBtn" data-content="${value.id}" class="circleButton" src="/images/Check_1xxxhdpi.png">
+                        </div>
+                        </div>`;
+                    }
+                })
+            });
         })
     </script>
 

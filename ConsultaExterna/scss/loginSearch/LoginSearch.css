@@ -1,0 +1,100 @@
+.modal-content.sa-login {
+  width: 80%;
+  margin: 0 10%;
+}
+.modal-content.sa-login .lg-header {
+  position: absolute;
+  top: -25px;
+  left: 43%;
+  width: 50px;
+  height: 50px;
+  background-color: #93b74b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content.sa-login .lg-header img {
+  width: 30px;
+  height: 30px;
+}
+.modal-content.sa-login .login-cotent .title {
+  width: 100%;
+  text-align: center;
+  margin: 7% 0 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img {
+  background-position: center !important;
+  height: 60px;
+  width: 50px;
+  padding: 0;
+  border: none;
+  outline: none;
+  justify-self: center;
+  cursor: pointer;
+}
+.modal-content.sa-login .login-cotent .log-img.doc {
+  background-size: 60px !important;
+  background: url("/images/DocGris.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img.doc:hover {
+  background: url("/images/DocVerde.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img.name {
+  background-size: 33px !important;
+  background: url("/images/Nombregris.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img.name:hover {
+  background: url("/images/NombreVerde.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img.hc {
+  background-size: 36px !important;
+  background: url("/images/HCGris.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-img.hc:hover {
+  background: url("/images/HCverde.png") no-repeat 0 0;
+}
+.modal-content.sa-login .login-cotent .log-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.modal-content.sa-login .login-cotent .log-selector .item-group {
+  display: grid;
+  grid-template-rows: 60px 20px;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content.sa-login .login-cotent .lg-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 18px;
+  border: none;
+  background-color: white;
+  outline: none;
+  margin: 4px;
+}
+.modal-content.sa-login .login-cotent .lg-btn.cancel {
+  border: 1px solid #ea8807;
+  color: #ea8807;
+}
+.modal-content.sa-login .login-cotent .lg-btn.cancel:hover {
+  background-color: #ea8807;
+  color: white;
+}
+.modal-content.sa-login .login-cotent .lg-btn.ok {
+  border: 1px solid #93b74b;
+  color: #93b74b;
+}
+.modal-content.sa-login .login-cotent .lg-btn.ok:hover {
+  background-color: #93b74b;
+  color: white;
+}
+.modal-content.sa-login .search {
+  width: 90%;
+}
+
+/*# sourceMappingURL=LoginSearch.css.map */

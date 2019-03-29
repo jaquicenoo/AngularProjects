@@ -1,0 +1,109 @@
+$gray:#c2c1c7;
+$darkgray:#c1c1c1;
+$ligthgray:#dee2e6;
+$orange:#ea8807;
+$green:#93b74b;
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+.modal-content.sa-login {
+    width: 80%;
+    margin: 0 10%;
+    .lg-header {
+        position: absolute;
+        top: -25px;
+        left: 43%;
+        width: 50px;
+        height: 50px;
+        background-color: $green;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .login-cotent {
+        .title {
+            width: 100%;
+            text-align: center;
+            margin: 7% 0 0 0;
+        }
+        .log-img {
+            background-position: center !important;
+            height: 60px;
+            width: 50px;
+            padding: 0;
+            border: none;
+            outline: none;
+            justify-self: center;
+            cursor: pointer;
+            &.doc {
+                background-size: 60px !important;
+                background: url("/images/DocGris.png") no-repeat 0 0;
+                &:hover {
+                    background: url("/images/DocVerde.png") no-repeat 0 0;
+                }
+            }
+            &.name {
+                background-size: 33px !important;
+                background: url("/images/Nombregris.png") no-repeat 0 0;
+                &:hover {
+                    background: url("/images/NombreVerde.png") no-repeat 0 0;
+                }
+            }
+            &.hc {
+                background-size: 36px !important;
+                background: url("/images/HCGris.png") no-repeat 0 0;
+                &:hover {
+                    background: url("/images/HCverde.png") no-repeat 0 0;
+                }
+            }
+        }
+        .log-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .item-group {
+                display: grid;
+                grid-template-rows: 60px 20px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .lg-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 18px;
+            border: none;
+            background-color: white;
+            outline: none;
+            margin: 4px;
+            &.cancel {
+                border: 1px solid $orange;
+                color: $orange;
+                &:hover {
+                    background-color: $orange;
+                    color: white;
+                }
+            }
+            &.ok {
+                border: 1px solid $green;
+                color: $green;
+                &:hover {
+                    background-color: $green;
+                    color: white;
+                }
+            }
+        }
+    }
+    .search {
+        width: 90%;
+    }
+}

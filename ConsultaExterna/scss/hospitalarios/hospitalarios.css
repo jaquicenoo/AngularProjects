@@ -29,6 +29,23 @@
 .bg-data-container .scse-form-group .animated-label {
   top: 15px;
 }
+.bg-data-container .scse-form-group .animated-label::after {
+  content: none;
+}
+.bg-data-container .scse-form-group .animated-label ~ .border-alert {
+  position: absolute;
+  left: 45%;
+  height: 2px;
+  width: 10px;
+  visibility: hidden;
+  background-color: var(--main-alarm-color);
+  transition: 0.2s ease all;
+}
+.bg-data-container .scse-form-group.show-alert .animated-label ~ .border-alert {
+  visibility: visible;
+  width: 100%;
+  left: 0;
+}
 .bg-data-container .scse-form-group .scse-form-control.active ~ .animated-label,
 .bg-data-container .scse-form-group .scse-form-control:focus:not(.select) ~ .animated-label {
   top: 0px;
@@ -41,13 +58,13 @@
   font-size: 12px;
 }
 .bg-data-container .scse-form-group input[type=date] ~ .scse-alert {
-  right: 3.8em;
+  right: -1.5em;
 }
 .bg-data-container .scse-form-group input[type=number] ~ .animated-label {
   width: 90%;
 }
 .bg-data-container .scse-form-group input[type=number] ~ .scse-alert {
-  right: 2em;
+  right: -1.5em;
 }
 .bg-data-container .scse-form-group input[type=number]::-webkit-outer-spin-button, .bg-data-container .scse-form-group input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
