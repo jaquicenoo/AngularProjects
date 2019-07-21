@@ -1,0 +1,58 @@
+$green: #93B74B;
+.action-ico {
+    background-position: center !important;
+    background-size: 50px !important;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &.historic {
+        height: 50px;
+        width: 50px;
+        background: url("/images/NotasRelacionadas.png") no-repeat 0 0;
+        &[aria-describedby] {
+            background: url("/images/NotasRelacionadasV.png") no-repeat 0 0;
+        }
+    }
+}
+
+.tbhistoric-container {
+    label {
+        color: white;
+    }
+    .tb-back {
+        background-color: white;
+        border-radius: 7px;
+        padding: 20px 10px;
+    }
+    .tbhistoric {
+        width: 100%;
+        padding: 10px;
+        thead {
+            background-color: $green;
+            color: white;
+            th:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            th:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+            th {
+                text-align: center;
+                font-weight: normal;
+                padding: 2px 5px;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid;
+            }
+            td {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.popover.fade {
+    max-width: none;
+}

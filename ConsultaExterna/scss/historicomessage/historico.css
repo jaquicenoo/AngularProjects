@@ -1,0 +1,55 @@
+.action-ico {
+  background-position: center !important;
+  background-size: 50px !important;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.action-ico.historic {
+  height: 50px;
+  width: 50px;
+  background: url("/images/NotasRelacionadas.png") no-repeat 0 0;
+}
+.action-ico.historic[aria-describedby] {
+  background: url("/images/NotasRelacionadasV.png") no-repeat 0 0;
+}
+
+.tbhistoric-container label {
+  color: white;
+}
+.tbhistoric-container .tb-back {
+  background-color: white;
+  border-radius: 7px;
+  padding: 20px 10px;
+}
+.tbhistoric-container .tbhistoric {
+  width: 100%;
+  padding: 10px;
+}
+.tbhistoric-container .tbhistoric thead {
+  background-color: #93B74B;
+  color: white;
+}
+.tbhistoric-container .tbhistoric thead th:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.tbhistoric-container .tbhistoric thead th:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.tbhistoric-container .tbhistoric thead th {
+  text-align: center;
+  font-weight: normal;
+  padding: 2px 5px;
+}
+.tbhistoric-container .tbhistoric tbody tr {
+  border-bottom: 1px solid;
+}
+.tbhistoric-container .tbhistoric tbody td {
+  text-align: center;
+}
+
+.popover.fade {
+  max-width: none;
+}
+
+/*# sourceMappingURL=historico.css.map */

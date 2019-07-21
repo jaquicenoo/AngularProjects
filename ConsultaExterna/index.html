@@ -32,6 +32,7 @@
     <link href="./scss/hospitalarios/hospitalarios.css" rel="stylesheet">
     <link href="./scss/searches/SearchAssistant.css" rel="stylesheet">
     <link href="./scss/loginSearch/LoginSearch.css" rel="stylesheet">
+    <link href="./scss/historicomessage/historico.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -1877,7 +1878,38 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="row tbhistoric-container">
+                <div class="col-sm-12">
+                    <label>Incapacidades del paciente</label>
+                </div>
+                <div class="col-sm-12">
+                    <div class=" tb-back">
+                        <table class="tbhistoric">
+                            <thead>
+                                <tr>
+                                    <th>Centro de atención</th>
+                                    <th>Episodio</th>
+                                    <th>Consecutivo</th>
+                                    <th>Días</th>
+                                    <th>Diagnostico</th>
+                                    <th>Fecha inicio</th>
+                                    <th>Fecha fin</th>
+                                    <th>Tipo</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-sm-12">
+                <button class="action-ico historic float-right" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"></button>
+            </div>
         </div>
+
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
         Launch demo modal
@@ -1957,6 +1989,7 @@
     <script src="./js/SurgicalBackground.js" type="text/javascript"></script>
     <script src="./js/PregnancyBackground.js" type="text/javascript"></script>
     <script src="./js/SearchAssistant.js" type="text/javascript"></script>
+    <script src="./js/ActiveDisabilities.js" type="text/javascript"></script>
     <!-- scripting  -->
     <script>
         $(document).ready(function() {
@@ -1994,6 +2027,8 @@
                     }
                 })
             });
+            DisabilitiesMessages();
+
         })
     </script>
 
